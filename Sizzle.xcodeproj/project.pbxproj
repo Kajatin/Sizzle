@@ -21,6 +21,7 @@
 		4C66112F2B12563F0098E337 /* RecipeEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66112E2B12563F0098E337 /* RecipeEditorSheet.swift */; };
 		4C6611312B127A7E0098E337 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6611302B127A7E0098E337 /* RecipeDetail.swift */; };
 		4C6611332B127B7E0098E337 /* RecipeGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6611322B127B7E0098E337 /* RecipeGrid.swift */; };
+		4CFD565C2B135EE90004745C /* EmojiBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD565B2B135EE90004745C /* EmojiBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		4C66112E2B12563F0098E337 /* RecipeEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorSheet.swift; sourceTree = "<group>"; };
 		4C6611302B127A7E0098E337 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		4C6611322B127B7E0098E337 /* RecipeGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeGrid.swift; sourceTree = "<group>"; };
+		4CFD565B2B135EE90004745C /* EmojiBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				4C0C8CE32B11F3E6002ABA4E /* ContentView.swift */,
 				4C496E242B121346009A6165 /* PrefersTabNavigationEnvironmentKey.swift */,
 				4C0C8CE52B11F3E6002ABA4E /* Recipe.swift */,
+				4CFD565B2B135EE90004745C /* EmojiBackground.swift */,
 				4C0C8CE72B11F3E7002ABA4E /* Assets.xcassets */,
 				4C0C8CEC2B11F3E7002ABA4E /* Sizzle.entitlements */,
 				4C0C8CED2B11F3E7002ABA4E /* Info.plist */,
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C496E1D2B1211AB009A6165 /* RecipeNavigationStack.swift in Sources */,
+				4CFD565C2B135EE90004745C /* EmojiBackground.swift in Sources */,
 				4C0C8CE42B11F3E6002ABA4E /* ContentView.swift in Sources */,
 				4C0C8CE62B11F3E6002ABA4E /* Recipe.swift in Sources */,
 				4C496E212B121296009A6165 /* AppDetailColumn.swift in Sources */,

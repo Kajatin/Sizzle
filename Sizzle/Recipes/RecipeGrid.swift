@@ -32,7 +32,7 @@ struct RecipeGrid: View {
             ToolbarItem {
                 Button {
                     withAnimation {
-                        let newRecipe = Recipe()
+                        let newRecipe = Recipe.example()
                         modelContext.insert(newRecipe)
                         navigationPath.append(newRecipe)
                     }
