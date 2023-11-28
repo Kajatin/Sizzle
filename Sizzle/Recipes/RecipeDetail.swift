@@ -9,18 +9,18 @@ import SwiftUI
 
 struct RecipeDetail: View {
     let recipe: Recipe
-    
+
     @State private var showEditSheet = false
-    
+
     let spacing: CGFloat = 20 // Define the spacing
-    
+
     var body: some View {
         ZStack {
             EmojiBackground()
                 .overlay {
                     VStack {
                         RecipeHeader(recipe: recipe)
-                        
+
                         GeometryReader { geometry in
                             HStack(alignment: .top, spacing: spacing) {
                                 Column1(recipe: recipe)
@@ -52,20 +52,40 @@ struct RecipeDetail: View {
 
 struct RecipeHeader: View {
     let recipe: Recipe
-    
+
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("\(recipe.name)")
-                    .font(.largeTitle)
-                    .fontWeight(.semibold)
-                
+                HStack(alignment: .center, spacing: 10) {
+                    Text("\(recipe.name)")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+
+                    Button {
+                        recipe.favorite.toggle()
+                    } label: {
+                        Group {
+                            if recipe.favorite {
+                                Image(systemName: "star")
+                            } else {
+                                Image(systemName: "star.fill")
+                            }
+                        }
+                        .font(.system(size: 20))
+                        .fontWeight(.bold)
+                    }
+                }
+
                 RecipeParameters(recipe: recipe)
             }
-            
+
             Spacer()
-            
-            Controls()
+
+            Button {
+                
+            } label: {
+                Label("Add to Schedule", systemImage: "list.clipboard")
+            }
         }
         .padding()
         .background(.thinMaterial)
@@ -73,21 +93,9 @@ struct RecipeHeader: View {
     }
 }
 
-struct Controls: View {
-    var body: some View {
-        HStack {
-            Button {
-                
-            } label: {
-                Label("Add to Shopping List", systemImage: "cart")
-            }
-        }
-    }
-}
-
 struct Column1: View {
     let recipe: Recipe
-    
+
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
@@ -95,6 +103,8 @@ struct Column1: View {
                 RecipeInfo(recipe: recipe)
                 Divider()
                 RecipeIngredients(ingredients: recipe.ingredients)
+                Divider()
+                RecipeStats(recipe: recipe)
             }
         }
         .background(.thinMaterial)
@@ -104,7 +114,7 @@ struct Column1: View {
 
 struct Column2: View {
     let recipe: Recipe
-    
+
     var body: some View {
         ScrollView {
             InstructionsView(instructions: recipe.instructions)
@@ -116,7 +126,7 @@ struct Column2: View {
 
 struct RecipeImage: View {
     let recipe: Recipe
-    
+
     var body: some View {
         AsyncImage(url: URL(string: "https://images.kitchenstories.io/wagtailOriginalImages/R2457-photo-title-1.jpg")) { phase in
             if let image = phase.image {
@@ -134,7 +144,7 @@ struct RecipeImage: View {
 
 struct RecipeInfo: View {
     let recipe: Recipe
-    
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -150,9 +160,9 @@ struct RecipeInfo: View {
             }
             .padding()
             .fixedSize(horizontal: false, vertical: true)
-            
+
             Divider()
-            
+
             Text(recipe.summary)
                 .font(.title3)
                 .multilineTextAlignment(.center)
@@ -164,7 +174,7 @@ struct RecipeInfo: View {
 struct RecipeInfoUnit: View {
     var title: String
     var value: String
-    
+
     var body: some View {
         VStack {
             Text(title)
@@ -178,16 +188,23 @@ struct RecipeInfoUnit: View {
 
 struct RecipeIngredients: View {
     var ingredients: [Ingredient]
-    
+
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("Ingredients")
                 .font(.headline.smallCaps())
                 .padding(.bottom, 4)
-            
+
             ForEach(ingredients) { ingredient in
                 IngredientRow(ingredient: ingredient)
             }
+            
+            Button {
+                
+            } label: {
+                Label("Add to Shopping List", systemImage: "cart")
+            }
+            .padding(.top, 10)
         }
         .padding()
     }
@@ -195,7 +212,7 @@ struct RecipeIngredients: View {
 
 struct IngredientRow: View {
     var ingredient: Ingredient
-    
+
     var body: some View {
         HStack {
             Text(ingredient.name)
@@ -207,32 +224,61 @@ struct IngredientRow: View {
     }
 }
 
+struct RecipeStats: View {
+    let recipe: Recipe
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+
+
+            if (recipe.cookedCount > 0) {
+                Text("Cooked \(recipe.cookedCount) time\(recipe.cookedCount == 1 ? "" : "s")")
+                    .foregroundStyle(.secondary)
+            }
+
+            if let lastPrepared = recipe.lastPrepared {
+                Text("Last prepared \(lastPrepared.formatted(date: .long, time: .shortened))")
+                    .foregroundStyle(.secondary)
+            }
+
+            Button {
+                recipe.cookedCount += 1
+                recipe.lastPrepared = .now
+            } label: {
+                Label("Log Cook", systemImage: "frying.pan")
+            }
+        }
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
+
 struct InstructionsView: View {
     var instructions: [Instruction]
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Instructions")
                 .font(.headline.smallCaps())
                 .padding(.bottom, 4)
-            
+
             ForEach(instructions.indices, id: \.self) { index in
                 VStack(alignment: .leading, spacing: 20) {
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Step \(index + 1)")
                             .font(.headline)
                             .foregroundStyle(.secondary)
-                        
+
                         let instruction = instructions[index]
                         Text(instruction.title)
                             .font(.title3)
                             .fontWeight(.semibold)
-                        
+
                         Text(instruction.instruction)
                             .lineLimit(nil)
                             .multilineTextAlignment(.leading)
                     }
-                    
+
                     Divider()
                         .padding(.bottom, 12)
                 }
@@ -244,7 +290,7 @@ struct InstructionsView: View {
 
 struct RecipeParameters: View {
     let recipe: Recipe
-    
+
     var body: some View {
         HStack(spacing: 14) {
             RecipeParametersUnit(image: "chart.bar", value: "\(recipe.difficulty.rawValue)")
@@ -261,7 +307,7 @@ struct RecipeParameters: View {
 struct RecipeParametersUnit: View {
     var image: String
     var value: String
-    
+
     var body: some View {
         HStack(spacing: 6) {
             Image(systemName: image)

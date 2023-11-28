@@ -26,6 +26,9 @@ final class Recipe: Identifiable {
 //    var keywords: [String]
 //    var allergens: [Allergen]
     var created: Date
+    var cookedCount: Int
+    var lastPrepared: Date?
+    var favorite: Bool
 
     init() {
         self.name = "New Recipe"
@@ -39,6 +42,8 @@ final class Recipe: Identifiable {
         self.cuisineType = .other
         self.mealType = .other
         self.created = .now
+        self.cookedCount = 0
+        self.favorite = false
     }
 
     // static function to create a new example recipe
@@ -67,6 +72,7 @@ final class Recipe: Identifiable {
         recipe.cuisineType = .spanish
         recipe.mealType = .lunch
         recipe.created = .now
+        recipe.lastPrepared = .now
         return recipe
     }
 }
