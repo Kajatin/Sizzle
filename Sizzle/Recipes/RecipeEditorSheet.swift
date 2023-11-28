@@ -5,7 +5,10 @@
 //  Created by Roland Kajatin on 25/11/2023.
 //
 
+////    var image: UIImage
+
 import SwiftUI
+import PhotosUI
 
 struct RecipeEditorSheet: View {
     var recipe: Recipe
@@ -15,11 +18,11 @@ struct RecipeEditorSheet: View {
         NavigationStack {
             RecipeEditor(recipe: recipe)
                 .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button(role: .cancel) {
+                    ToolbarItem {
+                        Button {
                             dismiss()
                         } label: {
-                            Label("Cancel", systemImage: "xmark")
+                            Image(systemName: "xmark")
                         }
                     }
                 }
@@ -29,12 +32,55 @@ struct RecipeEditorSheet: View {
 
 struct RecipeEditor: View {
     @State var recipe: Recipe
+    @State var selectedItem: PhotosPickerItem?
+    @State var uiImage: UIImage?
+    @State var showCameraPicker = false
     
     var body: some View {
         Form {
             Section(header: Text("Basic Information")) {
                 TextField("Name", text: $recipe.name)
                 TextField("Summary", text: $recipe.summary)
+            }
+            
+            Section(header: Text("Photo")) {
+                if let imageData = recipe.image, let uiImage = UIImage(data: imageData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .frame(maxWidth: .infinity, maxHeight: 250)
+                }
+                Button {
+                    showCameraPicker = true
+                } label: {
+                    Text("Take Photo")
+                }
+                PhotosPicker(selection: $selectedItem, matching: .images) {
+                    Text("Select Photo")
+                }
+                if recipe.image != nil {
+                    Button(role: .destructive) {
+                        withAnimation {
+                            recipe.image = nil
+                        }
+                    } label: {
+                        Text("Remove Image")
+                    }
+                }
+            }
+            
+            Section(header: Text("Details")) {
+                Picker("Meal", selection: $recipe.mealType) {
+                    ForEach(MealType.allCases, id: \.self) { mealType in
+                        Text(mealType.rawValue.capitalized).tag(mealType)
+                    }
+                }
+                Picker("Cuisine", selection: $recipe.cuisineType) {
+                    ForEach(Cuisine.allCases, id: \.self) { cuisine in
+                        Text(cuisine.rawValue.capitalized).tag(cuisine)
+                    }
+                }
                 Picker("Difficulty", selection: $recipe.difficulty) {
                     ForEach(Difficulty.allCases, id: \.self) { difficulty in
                         Text(difficulty.rawValue.capitalized).tag(difficulty)
@@ -47,15 +93,24 @@ struct RecipeEditor: View {
                 FluidStepper(title: "Cooking Time: \(recipe.cookingTime) minutes", value: $recipe.cookingTime)
             }
             
+            Section(header: Text("Serving Size")) {
+                Stepper("\(recipe.servingSize) servings", value: $recipe.servingSize, in: 1...20)
+            }
+            
             Section(header: Text("Ingredients")) {
                 ForEach($recipe.ingredients) { $ingredient in
                     HStack {
                         TextField("Name", text: $ingredient.name)
-                        Spacer()
+                        Divider()
                         TextField("Quantity", value: $ingredient.quantity, format: .number)
+                        Divider()
                         TextField("Unit", text: $ingredient.unit)
+                            .textInputAutocapitalization(.never)
                     }
                 }
+                .onDelete(perform: { indexSet in
+                    recipe.ingredients.remove(atOffsets: indexSet)
+                })
                 Button("Add Ingredient") {
                     recipe.ingredients.append(Ingredient(name: "", quantity: 0, unit: ""))
                 }
@@ -64,17 +119,33 @@ struct RecipeEditor: View {
             Section(header: Text("Instructions")) {
                 ForEach($recipe.instructions.indices, id: \.self) { index in
                     VStack(alignment: .leading) {
+                        Text("Step \(index + 1)")
+                            .font(.headline)
+                            .foregroundStyle(.secondary)
                         TextField("Title", text: $recipe.instructions[index].title)
+                            .font(.title3)
+                            .fontWeight(.semibold)
                         TextField("Instruction", text: $recipe.instructions[index].instruction)
+                            .lineLimit(nil)
+                            .multilineTextAlignment(.leading)
                     }
                 }
+                .onDelete(perform: { indexSet in
+                    recipe.instructions.remove(atOffsets: indexSet)
+                })
                 Button("Add Instruction") {
                     recipe.instructions.append(Instruction(title: "", instruction: ""))
                 }
             }
-            
-            Section(header: Text("Serving Size")) {
-                Stepper("\(recipe.servingSize) servings", value: $recipe.servingSize, in: 1...20)
+        }
+        .fullScreenCover(isPresented: $showCameraPicker) {
+            CameraPicker() { image in
+                recipe.image = image.jpegData(compressionQuality: 0.9)
+            }
+        }
+        .task(id: selectedItem) {
+            if let data = try? await selectedItem?.loadTransferable(type: Data.self) {
+                recipe.image = data
             }
         }
     }

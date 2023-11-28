@@ -82,7 +82,7 @@ struct RecipeHeader: View {
             Spacer()
 
             Button {
-                
+
             } label: {
                 Label("Add to Schedule", systemImage: "list.clipboard")
             }
@@ -128,16 +128,17 @@ struct RecipeImage: View {
     let recipe: Recipe
 
     var body: some View {
-        AsyncImage(url: URL(string: "https://images.kitchenstories.io/wagtailOriginalImages/R2457-photo-title-1.jpg")) { phase in
-            if let image = phase.image {
-                image
-                    .resizable()
-                    .scaledToFit()
-            } else if phase.error != nil {
-                Color.red // Indicates an error.
-            } else {
-                Color.blue // Acts as a placeholder.
-            }
+        if let imageData = recipe.image, let uiImage = UIImage(data: imageData) {
+            Image(uiImage: uiImage)
+                .resizable()
+//                .scaledToFit()
+                .frame(maxWidth: .infinity, maxHeight: 250)
+        } else {
+            Image(systemName: "photo")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(.secondary)
+                .scaleEffect(0.65)
         }
     }
 }
@@ -198,9 +199,9 @@ struct RecipeIngredients: View {
             ForEach(ingredients) { ingredient in
                 IngredientRow(ingredient: ingredient)
             }
-            
+
             Button {
-                
+
             } label: {
                 Label("Add to Shopping List", systemImage: "cart")
             }

@@ -14,7 +14,7 @@ final class Recipe: Identifiable {
     var uuid = UUID()
     var name: String
     var summary: String
-//    var image: UIImage
+    @Attribute(.externalStorage) var image: Data?
     var difficulty: Difficulty
     var prepTime: Int
     var cookingTime: Int

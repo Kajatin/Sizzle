@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C019F8D2B1686A800D47272 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C019F8C2B1686A800D47272 /* CameraPicker.swift */; };
 		4C0C8CE22B11F3E6002ABA4E /* SizzleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0C8CE12B11F3E6002ABA4E /* SizzleApp.swift */; };
 		4C0C8CE42B11F3E6002ABA4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0C8CE32B11F3E6002ABA4E /* ContentView.swift */; };
 		4C0C8CE62B11F3E6002ABA4E /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0C8CE52B11F3E6002ABA4E /* Recipe.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C019F8C2B1686A800D47272 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
 		4C0C8CDE2B11F3E6002ABA4E /* Sizzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sizzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0C8CE12B11F3E6002ABA4E /* SizzleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleApp.swift; sourceTree = "<group>"; };
 		4C0C8CE32B11F3E6002ABA4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				4C6611322B127B7E0098E337 /* RecipeGrid.swift */,
 				4C6611302B127A7E0098E337 /* RecipeDetail.swift */,
 				4C66112E2B12563F0098E337 /* RecipeEditorSheet.swift */,
+				4C019F8C2B1686A800D47272 /* CameraPicker.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				4C496E1F2B121246009A6165 /* AppSidebarList.swift in Sources */,
 				4C6611312B127A7E0098E337 /* RecipeDetail.swift in Sources */,
 				4C66112F2B12563F0098E337 /* RecipeEditorSheet.swift in Sources */,
+				4C019F8D2B1686A800D47272 /* CameraPicker.swift in Sources */,
 				4C496E232B1212CF009A6165 /* AppTabView.swift in Sources */,
 				4C496E1A2B12110F009A6165 /* AppScreen.swift in Sources */,
 				4C496E252B121346009A6165 /* PrefersTabNavigationEnvironmentKey.swift in Sources */,
@@ -341,6 +345,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sizzle/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Add photos of your meals to the recipes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -372,6 +377,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sizzle/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Add photos of your meals to the recipes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
