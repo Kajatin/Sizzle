@@ -131,14 +131,15 @@ struct RecipeImage: View {
         if let imageData = recipe.image, let uiImage = UIImage(data: imageData) {
             Image(uiImage: uiImage)
                 .resizable()
-//                .scaledToFit()
-                .frame(maxWidth: .infinity, maxHeight: 250)
+                .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: .infinity, maxHeight: 240)
+                .clipped()
         } else {
             Image(systemName: "photo")
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.secondary)
-                .scaleEffect(0.65)
+                .scaleEffect(0.25)
         }
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 enum AppScreen: Codable, Hashable, Identifiable, CaseIterable {
     case recipes
+    case schedule
     
     var id: AppScreen { self }
 }
@@ -18,7 +19,9 @@ extension AppScreen {
     var label: some View {
         switch self {
         case .recipes:
-            Label("Recipes", systemImage: "bird")
+            Label("Recipes", systemImage: "book.pages")
+        case .schedule:
+            Label("Schedule", systemImage: "calendar")
         }
     }
     
@@ -27,6 +30,8 @@ extension AppScreen {
         switch self {
         case .recipes:
             RecipeNavigationStack()
+        case .schedule:
+            ScheduleNavigationStack()
         }
     }
 }

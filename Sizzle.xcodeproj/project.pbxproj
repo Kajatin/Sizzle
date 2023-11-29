@@ -13,6 +13,8 @@
 		4C0C8CE62B11F3E6002ABA4E /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0C8CE52B11F3E6002ABA4E /* Recipe.swift */; };
 		4C0C8CE82B11F3E7002ABA4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0C8CE72B11F3E7002ABA4E /* Assets.xcassets */; };
 		4C0C8CEB2B11F3E7002ABA4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0C8CEA2B11F3E7002ABA4E /* Preview Assets.xcassets */; };
+		4C2A50B42B17DB7C000B6860 /* ScheduleNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A50B32B17DB7C000B6860 /* ScheduleNavigationStack.swift */; };
+		4C2A50B62B17DBAF000B6860 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A50B52B17DBAF000B6860 /* Schedule.swift */; };
 		4C496E1A2B12110F009A6165 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C496E192B12110F009A6165 /* AppScreen.swift */; };
 		4C496E1D2B1211AB009A6165 /* RecipeNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C496E1C2B1211AB009A6165 /* RecipeNavigationStack.swift */; };
 		4C496E1F2B121246009A6165 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C496E1E2B121246009A6165 /* AppSidebarList.swift */; };
@@ -35,6 +37,8 @@
 		4C0C8CEA2B11F3E7002ABA4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C0C8CEC2B11F3E7002ABA4E /* Sizzle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sizzle.entitlements; sourceTree = "<group>"; };
 		4C0C8CED2B11F3E7002ABA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C2A50B32B17DB7C000B6860 /* ScheduleNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNavigationStack.swift; sourceTree = "<group>"; };
+		4C2A50B52B17DBAF000B6860 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		4C496E192B12110F009A6165 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		4C496E1C2B1211AB009A6165 /* RecipeNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNavigationStack.swift; sourceTree = "<group>"; };
 		4C496E1E2B121246009A6165 /* AppSidebarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 		4C0C8CE02B11F3E6002ABA4E /* Sizzle */ = {
 			isa = PBXGroup;
 			children = (
+				4C2A50B22B17DB76000B6860 /* Schedule */,
 				4C496E1B2B12119E009A6165 /* Recipes */,
 				4C496E182B1210FF009A6165 /* Navigation */,
 				4C0C8CE12B11F3E6002ABA4E /* SizzleApp.swift */,
@@ -98,6 +103,15 @@
 				4C0C8CEA2B11F3E7002ABA4E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C2A50B22B17DB76000B6860 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				4C2A50B32B17DB7C000B6860 /* ScheduleNavigationStack.swift */,
+				4C2A50B52B17DBAF000B6860 /* Schedule.swift */,
+			);
+			path = Schedule;
 			sourceTree = "<group>";
 		};
 		4C496E182B1210FF009A6165 /* Navigation */ = {
@@ -193,11 +207,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2A50B42B17DB7C000B6860 /* ScheduleNavigationStack.swift in Sources */,
 				4C496E1D2B1211AB009A6165 /* RecipeNavigationStack.swift in Sources */,
 				4CFD565C2B135EE90004745C /* EmojiBackground.swift in Sources */,
 				4C0C8CE42B11F3E6002ABA4E /* ContentView.swift in Sources */,
 				4C0C8CE62B11F3E6002ABA4E /* Recipe.swift in Sources */,
 				4C496E212B121296009A6165 /* AppDetailColumn.swift in Sources */,
+				4C2A50B62B17DBAF000B6860 /* Schedule.swift in Sources */,
 				4C0C8CE22B11F3E6002ABA4E /* SizzleApp.swift in Sources */,
 				4C6611332B127B7E0098E337 /* RecipeGrid.swift in Sources */,
 				4C496E1F2B121246009A6165 /* AppSidebarList.swift in Sources */,

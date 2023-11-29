@@ -19,7 +19,7 @@ struct EmojiBackground: View {
                 .edgesIgnoringSafeArea(.all)
             
             GeometryReader { geometry in
-                ForEach(0..<numberOfEmojis, id: \.self) { _ in // Reduced number of emojis
+                ForEach(0..<numberOfEmojis, id: \.self) { _ in
                     Text(emojis.randomElement()!)
                         .font(.system(size: 80))
                         .opacity(0.6)

@@ -105,6 +105,7 @@ enum Cuisine: String, CaseIterable, Identifiable, Codable {
     case portuguese
     case swedish
     case polish
+    case hungarian
     case russian
     case irish
     case scottish

@@ -5,8 +5,8 @@
 //  Created by Roland Kajatin on 28/11/2023.
 //
 
-import SwiftUI
 import UIKit
+import SwiftUI
 
 struct CameraPicker: UIViewControllerRepresentable {
     private var sourceType: UIImagePickerController.SourceType = .camera
@@ -35,7 +35,6 @@ struct CameraPicker: UIViewControllerRepresentable {
     }
     
     final public class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        
         private let onDismiss: () -> Void
         private let onImagePicked: (UIImage) -> Void
         
@@ -51,6 +50,7 @@ struct CameraPicker: UIViewControllerRepresentable {
             }
             self.onDismiss()
         }
+        
         public func imagePickerControllerDidCancel(_: UIImagePickerController) {
             self.onDismiss()
         }
