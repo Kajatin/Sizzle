@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeDetail: View {
     let recipe: Recipe
+    @Binding var navigationPath: [Recipe]
 
     @State private var showEditSheet = false
 
@@ -43,7 +44,7 @@ struct RecipeDetail: View {
                         }
                     }
                     .sheet(isPresented: $showEditSheet) {
-                        RecipeEditorSheet(recipe: recipe)
+                        RecipeEditorSheet(recipe: recipe, navigationPath: $navigationPath)
                     }
                 }
         }
@@ -321,8 +322,9 @@ struct RecipeParametersUnit: View {
 }
 
 #Preview {
+    @State var path: [Recipe] = []
     let recipe = Recipe.example()
     recipe.cuisineType = .spanish
     recipe.mealType = .lunch
-    return RecipeDetail(recipe: recipe)
+    return RecipeDetail(recipe: recipe, navigationPath: $path)
 }

@@ -12,11 +12,13 @@ import PhotosUI
 
 struct RecipeEditorSheet: View {
     var recipe: Recipe
+    @Binding var navigationPath: [Recipe]
+    
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationStack {
-            RecipeEditor(recipe: recipe)
+            RecipeEditor(recipe: recipe, navigationPath: $navigationPath)
                 .toolbar {
                     ToolbarItem {
                         Button {
@@ -32,13 +34,19 @@ struct RecipeEditorSheet: View {
 
 struct RecipeEditor: View {
     @State var recipe: Recipe
+    @Binding var navigationPath: [Recipe]
+    
     @State var selectedItem: PhotosPickerItem?
     @State var uiImage: UIImage?
     @State var showCameraPicker = false
+    @State var showDeletionConfirmation = false
+    
+    @Environment(\.modelContext) private var modelContext
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         Form {
-            Section(header: Text("Basic Information")) {
+            Section(header: Text("Details")) {
                 TextField("Name", text: $recipe.name)
                 TextField("Summary", text: $recipe.summary)
             }
@@ -70,7 +78,7 @@ struct RecipeEditor: View {
                 }
             }
             
-            Section(header: Text("Details")) {
+            Section(header: Text("Categories")) {
                 Picker("Meal", selection: $recipe.mealType) {
                     ForEach(MealType.allCases, id: \.self) { mealType in
                         Text(mealType.rawValue.capitalized).tag(mealType)
@@ -135,6 +143,22 @@ struct RecipeEditor: View {
                 })
                 Button("Add Instruction") {
                     recipe.instructions.append(Instruction(title: "", instruction: ""))
+                }
+            }
+            
+            Section(header: Text("Delete")) {
+                Button("Delete Recipe", role: .destructive) {
+                    showDeletionConfirmation = true
+                }
+                .alert("Delete \(recipe.name)?", isPresented: $showDeletionConfirmation) {
+                    Button("Delete", role: .destructive) {
+                        withAnimation {
+                            showDeletionConfirmation = false
+                            modelContext.delete(recipe)
+                            navigationPath.remove(at: navigationPath.count - 1)
+                            dismiss()
+                        }
+                    }
                 }
             }
         }
@@ -211,5 +235,6 @@ struct FluidStepper: View {
 
 #Preview {
     var recipe = Recipe()
-    return RecipeEditorSheet(recipe: recipe)
+    @State var path: [Recipe] = []
+    return RecipeEditorSheet(recipe: recipe, navigationPath: $path)
 }

@@ -35,7 +35,7 @@ struct RecipeGrid: View {
         }
         .navigationTitle("Recipes")
         .navigationDestination(for: Recipe.self) { recipe in
-            RecipeDetail(recipe: recipe)
+            RecipeDetail(recipe: recipe, navigationPath: $navigationPath)
         }
         .toolbar {
             ToolbarItem {
