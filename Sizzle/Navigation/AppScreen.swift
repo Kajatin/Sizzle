@@ -9,6 +9,8 @@ import SwiftUI
 
 enum AppScreen: Codable, Hashable, Identifiable, CaseIterable {
     case recipes
+    case favourites
+    case recents
     case schedule
     
     var id: AppScreen { self }
@@ -20,6 +22,10 @@ extension AppScreen {
         switch self {
         case .recipes:
             Label("Recipes", systemImage: "book.pages")
+        case .favourites:
+            Label("Favourites", systemImage: "heart")
+        case .recents:
+            Label("Recents", systemImage: "clock")
         case .schedule:
             Label("Schedule", systemImage: "calendar")
         }
@@ -30,6 +36,10 @@ extension AppScreen {
         switch self {
         case .recipes:
             RecipeNavigationStack()
+        case .favourites:
+            FavouritesNavigationStack()
+        case .recents:
+            RecentsNavigationStack()
         case .schedule:
             ScheduleNavigationStack()
         }

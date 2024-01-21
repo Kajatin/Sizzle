@@ -7,18 +7,22 @@
 
 import SwiftUI
 import SwiftData
+import RecipeDataContainer
 
 struct RecipeNavigationStack: View {
     @State private var path: [Recipe] = []
     
     var body: some View {
-        NavigationStack(path: $path) {
-            RecipeGrid(navigationPath: $path)
-        }
+        EmojiBackground()
+            .overlay {
+                NavigationStack(path: $path) {
+                    RecipeGrid(navigationPath: $path)
+                }
+            }
     }
 }
 
 #Preview {
     RecipeNavigationStack()
-        .modelContainer(for: Recipe.self, inMemory: true)
+        .recipeDataContainer(inMemory: true)
 }

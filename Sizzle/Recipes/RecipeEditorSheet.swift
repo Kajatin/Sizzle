@@ -5,10 +5,9 @@
 //  Created by Roland Kajatin on 25/11/2023.
 //
 
-////    var image: UIImage
-
 import SwiftUI
 import PhotosUI
+import RecipeDataContainer
 
 struct RecipeEditorSheet: View {
     var recipe: Recipe
@@ -65,7 +64,7 @@ struct RecipeEditor: View {
                     Text("Take Photo")
                 }
                 PhotosPicker(selection: $selectedItem, matching: .images) {
-                    Text("Select Photo")
+                    Text("Select Image")
                 }
                 if recipe.image != nil {
                     Button(role: .destructive) {

@@ -10,11 +10,10 @@
 		4C019F8D2B1686A800D47272 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C019F8C2B1686A800D47272 /* CameraPicker.swift */; };
 		4C0C8CE22B11F3E6002ABA4E /* SizzleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0C8CE12B11F3E6002ABA4E /* SizzleApp.swift */; };
 		4C0C8CE42B11F3E6002ABA4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0C8CE32B11F3E6002ABA4E /* ContentView.swift */; };
-		4C0C8CE62B11F3E6002ABA4E /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0C8CE52B11F3E6002ABA4E /* Recipe.swift */; };
 		4C0C8CE82B11F3E7002ABA4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0C8CE72B11F3E7002ABA4E /* Assets.xcassets */; };
 		4C0C8CEB2B11F3E7002ABA4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0C8CEA2B11F3E7002ABA4E /* Preview Assets.xcassets */; };
 		4C2A50B42B17DB7C000B6860 /* ScheduleNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A50B32B17DB7C000B6860 /* ScheduleNavigationStack.swift */; };
-		4C2A50B62B17DBAF000B6860 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A50B52B17DBAF000B6860 /* Schedule.swift */; };
+		4C2A50B62B17DBAF000B6860 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A50B52B17DBAF000B6860 /* ScheduleView.swift */; };
 		4C496E1A2B12110F009A6165 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C496E192B12110F009A6165 /* AppScreen.swift */; };
 		4C496E1D2B1211AB009A6165 /* RecipeNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C496E1C2B1211AB009A6165 /* RecipeNavigationStack.swift */; };
 		4C496E1F2B121246009A6165 /* AppSidebarList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C496E1E2B121246009A6165 /* AppSidebarList.swift */; };
@@ -24,6 +23,30 @@
 		4C66112F2B12563F0098E337 /* RecipeEditorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66112E2B12563F0098E337 /* RecipeEditorSheet.swift */; };
 		4C6611312B127A7E0098E337 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6611302B127A7E0098E337 /* RecipeDetail.swift */; };
 		4C6611332B127B7E0098E337 /* RecipeGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6611322B127B7E0098E337 /* RecipeGrid.swift */; };
+		4C85B3412B2DCE8C003DC1A2 /* RecipeScheduleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C85B3402B2DCE8C003DC1A2 /* RecipeScheduleSheet.swift */; };
+		4C9093C22B5D3846000F96A3 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C12B5D3846000F96A3 /* AppScreen.swift */; };
+		4C9093C42B5D38A7000F96A3 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C32B5D38A7000F96A3 /* AppTabView.swift */; };
+		4C9093C72B5D395A000F96A3 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C62B5D395A000F96A3 /* Search.swift */; };
+		4C9093CA2B5D3973000F96A3 /* RecipeNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C92B5D3973000F96A3 /* RecipeNavigationStack.swift */; };
+		4C9093CC2B5D39FD000F96A3 /* EmojiBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093CB2B5D39FD000F96A3 /* EmojiBackground.swift */; };
+		4C9093CE2B5D3BE6000F96A3 /* RecipeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093CD2B5D3BE6000F96A3 /* RecipeBanner.swift */; };
+		4C9093D12B5D3EA1000F96A3 /* ForYouNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D02B5D3EA1000F96A3 /* ForYouNavigationStack.swift */; };
+		4C9093D32B5D3ED5000F96A3 /* ForYouCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D22B5D3ED5000F96A3 /* ForYouCarousel.swift */; };
+		4C9093D62B5D4EC9000F96A3 /* UpNextNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D52B5D4EC9000F96A3 /* UpNextNavigationStack.swift */; };
+		4C9093D82B5D4EE0000F96A3 /* UpNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D72B5D4EE0000F96A3 /* UpNext.swift */; };
+		4C9093DA2B5D517A000F96A3 /* SearchNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D92B5D517A000F96A3 /* SearchNavigationStack.swift */; };
+		4CC355642B4B33D100D0CD16 /* Sizzle_TVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC355632B4B33D100D0CD16 /* Sizzle_TVApp.swift */; };
+		4CC355662B4B33D100D0CD16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC355652B4B33D100D0CD16 /* ContentView.swift */; };
+		4CC3556A2B4B33D300D0CD16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC355692B4B33D300D0CD16 /* Assets.xcassets */; };
+		4CC3556D2B4B33D300D0CD16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC3556C2B4B33D300D0CD16 /* Preview Assets.xcassets */; };
+		4CC355742B4B343800D0CD16 /* RecipeDataContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 4CC355732B4B343800D0CD16 /* RecipeDataContainer */; };
+		4CC355772B4B363500D0CD16 /* RecipeGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC355762B4B363500D0CD16 /* RecipeGrid.swift */; };
+		4CDEC0262B5B1064003289A0 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCDBDBF2B541BAF00855B64 /* RecipeDetail.swift */; };
+		4CEBBD382B3AD37100C6B7DC /* RecipeDataContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 4CEBBD372B3AD37100C6B7DC /* RecipeDataContainer */; };
+		4CFB2B262B1D13D600C99715 /* FavouritesNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB2B252B1D13D600C99715 /* FavouritesNavigationStack.swift */; };
+		4CFB2B282B1D13F000C99715 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB2B272B1D13F000C99715 /* Favourites.swift */; };
+		4CFB2B2A2B1D141A00C99715 /* RecentsNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB2B292B1D141A00C99715 /* RecentsNavigationStack.swift */; };
+		4CFB2B2C2B1D144C00C99715 /* Recents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFB2B2B2B1D144C00C99715 /* Recents.swift */; };
 		4CFD565C2B135EE90004745C /* EmojiBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD565B2B135EE90004745C /* EmojiBackground.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,13 +55,12 @@
 		4C0C8CDE2B11F3E6002ABA4E /* Sizzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sizzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0C8CE12B11F3E6002ABA4E /* SizzleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizzleApp.swift; sourceTree = "<group>"; };
 		4C0C8CE32B11F3E6002ABA4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4C0C8CE52B11F3E6002ABA4E /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		4C0C8CE72B11F3E7002ABA4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C0C8CEA2B11F3E7002ABA4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C0C8CEC2B11F3E7002ABA4E /* Sizzle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sizzle.entitlements; sourceTree = "<group>"; };
 		4C0C8CED2B11F3E7002ABA4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C2A50B32B17DB7C000B6860 /* ScheduleNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNavigationStack.swift; sourceTree = "<group>"; };
-		4C2A50B52B17DBAF000B6860 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		4C2A50B52B17DBAF000B6860 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		4C496E192B12110F009A6165 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		4C496E1C2B1211AB009A6165 /* RecipeNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNavigationStack.swift; sourceTree = "<group>"; };
 		4C496E1E2B121246009A6165 /* AppSidebarList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarList.swift; sourceTree = "<group>"; };
@@ -48,6 +70,32 @@
 		4C66112E2B12563F0098E337 /* RecipeEditorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorSheet.swift; sourceTree = "<group>"; };
 		4C6611302B127A7E0098E337 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		4C6611322B127B7E0098E337 /* RecipeGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeGrid.swift; sourceTree = "<group>"; };
+		4C85B3402B2DCE8C003DC1A2 /* RecipeScheduleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeScheduleSheet.swift; sourceTree = "<group>"; };
+		4C9093C12B5D3846000F96A3 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		4C9093C32B5D38A7000F96A3 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		4C9093C62B5D395A000F96A3 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		4C9093C92B5D3973000F96A3 /* RecipeNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNavigationStack.swift; sourceTree = "<group>"; };
+		4C9093CB2B5D39FD000F96A3 /* EmojiBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBackground.swift; sourceTree = "<group>"; };
+		4C9093CD2B5D3BE6000F96A3 /* RecipeBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBanner.swift; sourceTree = "<group>"; };
+		4C9093D02B5D3EA1000F96A3 /* ForYouNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouNavigationStack.swift; sourceTree = "<group>"; };
+		4C9093D22B5D3ED5000F96A3 /* ForYouCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouCarousel.swift; sourceTree = "<group>"; };
+		4C9093D52B5D4EC9000F96A3 /* UpNextNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpNextNavigationStack.swift; sourceTree = "<group>"; };
+		4C9093D72B5D4EE0000F96A3 /* UpNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpNext.swift; sourceTree = "<group>"; };
+		4C9093D92B5D517A000F96A3 /* SearchNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationStack.swift; sourceTree = "<group>"; };
+		4CC355612B4B33D100D0CD16 /* Sizzle TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sizzle TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC355632B4B33D100D0CD16 /* Sizzle_TVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizzle_TVApp.swift; sourceTree = "<group>"; };
+		4CC355652B4B33D100D0CD16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4CC355692B4B33D300D0CD16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CC3556C2B4B33D300D0CD16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4CC3556E2B4B33D300D0CD16 /* Sizzle_TV.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sizzle_TV.entitlements; sourceTree = "<group>"; };
+		4CC3556F2B4B33D300D0CD16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC355762B4B363500D0CD16 /* RecipeGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeGrid.swift; sourceTree = "<group>"; };
+		4CCDBDBF2B541BAF00855B64 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
+		4CEBBD352B3ACFEF00C6B7DC /* RecipeDataContainer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = RecipeDataContainer; path = Sizzle/RecipeDataContainer; sourceTree = "<group>"; };
+		4CFB2B252B1D13D600C99715 /* FavouritesNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesNavigationStack.swift; sourceTree = "<group>"; };
+		4CFB2B272B1D13F000C99715 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
+		4CFB2B292B1D141A00C99715 /* RecentsNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentsNavigationStack.swift; sourceTree = "<group>"; };
+		4CFB2B2B2B1D144C00C99715 /* Recents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recents.swift; sourceTree = "<group>"; };
 		4CFD565B2B135EE90004745C /* EmojiBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +104,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CEBBD382B3AD37100C6B7DC /* RecipeDataContainer in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC3555E2B4B33D100D0CD16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC355742B4B343800D0CD16 /* RecipeDataContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,8 +122,11 @@
 		4C0C8CD52B11F3E6002ABA4E = {
 			isa = PBXGroup;
 			children = (
+				4CEBBD352B3ACFEF00C6B7DC /* RecipeDataContainer */,
 				4C0C8CE02B11F3E6002ABA4E /* Sizzle */,
+				4CC355622B4B33D100D0CD16 /* Sizzle TV */,
 				4C0C8CDF2B11F3E6002ABA4E /* Products */,
+				4CEBBD362B3AD37100C6B7DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				4C0C8CDE2B11F3E6002ABA4E /* Sizzle.app */,
+				4CC355612B4B33D100D0CD16 /* Sizzle TV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,13 +142,14 @@
 		4C0C8CE02B11F3E6002ABA4E /* Sizzle */ = {
 			isa = PBXGroup;
 			children = (
+				4CFB2B242B1D13C200C99715 /* Recents */,
+				4CFB2B232B1D13BB00C99715 /* Favourites */,
 				4C2A50B22B17DB76000B6860 /* Schedule */,
 				4C496E1B2B12119E009A6165 /* Recipes */,
 				4C496E182B1210FF009A6165 /* Navigation */,
 				4C0C8CE12B11F3E6002ABA4E /* SizzleApp.swift */,
 				4C0C8CE32B11F3E6002ABA4E /* ContentView.swift */,
 				4C496E242B121346009A6165 /* PrefersTabNavigationEnvironmentKey.swift */,
-				4C0C8CE52B11F3E6002ABA4E /* Recipe.swift */,
 				4CFD565B2B135EE90004745C /* EmojiBackground.swift */,
 				4C0C8CE72B11F3E7002ABA4E /* Assets.xcassets */,
 				4C0C8CEC2B11F3E7002ABA4E /* Sizzle.entitlements */,
@@ -109,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4C2A50B32B17DB7C000B6860 /* ScheduleNavigationStack.swift */,
-				4C2A50B52B17DBAF000B6860 /* Schedule.swift */,
+				4C2A50B52B17DBAF000B6860 /* ScheduleView.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -131,10 +193,110 @@
 				4C496E1C2B1211AB009A6165 /* RecipeNavigationStack.swift */,
 				4C6611322B127B7E0098E337 /* RecipeGrid.swift */,
 				4C6611302B127A7E0098E337 /* RecipeDetail.swift */,
+				4C85B3402B2DCE8C003DC1A2 /* RecipeScheduleSheet.swift */,
 				4C66112E2B12563F0098E337 /* RecipeEditorSheet.swift */,
 				4C019F8C2B1686A800D47272 /* CameraPicker.swift */,
 			);
 			path = Recipes;
+			sourceTree = "<group>";
+		};
+		4C9093C02B5D383E000F96A3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4C9093C12B5D3846000F96A3 /* AppScreen.swift */,
+				4C9093C32B5D38A7000F96A3 /* AppTabView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		4C9093C52B5D3954000F96A3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4C9093C62B5D395A000F96A3 /* Search.swift */,
+				4C9093D92B5D517A000F96A3 /* SearchNavigationStack.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4C9093C82B5D3969000F96A3 /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				4C9093C92B5D3973000F96A3 /* RecipeNavigationStack.swift */,
+				4CC355762B4B363500D0CD16 /* RecipeGrid.swift */,
+				4CCDBDBF2B541BAF00855B64 /* RecipeDetail.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		4C9093CF2B5D3E9D000F96A3 /* ForYou */ = {
+			isa = PBXGroup;
+			children = (
+				4C9093D02B5D3EA1000F96A3 /* ForYouNavigationStack.swift */,
+				4C9093D22B5D3ED5000F96A3 /* ForYouCarousel.swift */,
+				4C9093CD2B5D3BE6000F96A3 /* RecipeBanner.swift */,
+			);
+			path = ForYou;
+			sourceTree = "<group>";
+		};
+		4C9093D42B5D4EA9000F96A3 /* UpNext */ = {
+			isa = PBXGroup;
+			children = (
+				4C9093D52B5D4EC9000F96A3 /* UpNextNavigationStack.swift */,
+				4C9093D72B5D4EE0000F96A3 /* UpNext.swift */,
+			);
+			path = UpNext;
+			sourceTree = "<group>";
+		};
+		4CC355622B4B33D100D0CD16 /* Sizzle TV */ = {
+			isa = PBXGroup;
+			children = (
+				4C9093CF2B5D3E9D000F96A3 /* ForYou */,
+				4C9093C82B5D3969000F96A3 /* Recipes */,
+				4C9093D42B5D4EA9000F96A3 /* UpNext */,
+				4C9093C52B5D3954000F96A3 /* Search */,
+				4C9093C02B5D383E000F96A3 /* Navigation */,
+				4CC355632B4B33D100D0CD16 /* Sizzle_TVApp.swift */,
+				4CC355652B4B33D100D0CD16 /* ContentView.swift */,
+				4C9093CB2B5D39FD000F96A3 /* EmojiBackground.swift */,
+				4CC355692B4B33D300D0CD16 /* Assets.xcassets */,
+				4CC3556E2B4B33D300D0CD16 /* Sizzle_TV.entitlements */,
+				4CC3556F2B4B33D300D0CD16 /* Info.plist */,
+				4CC3556B2B4B33D300D0CD16 /* Preview Content */,
+			);
+			path = "Sizzle TV";
+			sourceTree = "<group>";
+		};
+		4CC3556B2B4B33D300D0CD16 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4CC3556C2B4B33D300D0CD16 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CEBBD362B3AD37100C6B7DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CFB2B232B1D13BB00C99715 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				4CFB2B252B1D13D600C99715 /* FavouritesNavigationStack.swift */,
+				4CFB2B272B1D13F000C99715 /* Favourites.swift */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		4CFB2B242B1D13C200C99715 /* Recents */ = {
+			isa = PBXGroup;
+			children = (
+				4CFB2B292B1D141A00C99715 /* RecentsNavigationStack.swift */,
+				4CFB2B2B2B1D144C00C99715 /* Recents.swift */,
+			);
+			path = Recents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +315,31 @@
 			dependencies = (
 			);
 			name = Sizzle;
+			packageProductDependencies = (
+				4CEBBD372B3AD37100C6B7DC /* RecipeDataContainer */,
+			);
 			productName = Sizzle;
 			productReference = 4C0C8CDE2B11F3E6002ABA4E /* Sizzle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CC355602B4B33D100D0CD16 /* Sizzle TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC355722B4B33D300D0CD16 /* Build configuration list for PBXNativeTarget "Sizzle TV" */;
+			buildPhases = (
+				4CC3555D2B4B33D100D0CD16 /* Sources */,
+				4CC3555E2B4B33D100D0CD16 /* Frameworks */,
+				4CC3555F2B4B33D100D0CD16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sizzle TV";
+			packageProductDependencies = (
+				4CC355732B4B343800D0CD16 /* RecipeDataContainer */,
+			);
+			productName = "Sizzle TV";
+			productReference = 4CC355612B4B33D100D0CD16 /* Sizzle TV.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -164,11 +349,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					4C0C8CDD2B11F3E6002ABA4E = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					4CC355602B4B33D100D0CD16 = {
+						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
@@ -186,6 +374,7 @@
 			projectRoot = "";
 			targets = (
 				4C0C8CDD2B11F3E6002ABA4E /* Sizzle */,
+				4CC355602B4B33D100D0CD16 /* Sizzle TV */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +389,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4CC3555F2B4B33D100D0CD16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC3556D2B4B33D300D0CD16 /* Preview Assets.xcassets in Resources */,
+				4CC3556A2B4B33D300D0CD16 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -208,12 +406,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2A50B42B17DB7C000B6860 /* ScheduleNavigationStack.swift in Sources */,
+				4CFB2B2A2B1D141A00C99715 /* RecentsNavigationStack.swift in Sources */,
+				4C85B3412B2DCE8C003DC1A2 /* RecipeScheduleSheet.swift in Sources */,
 				4C496E1D2B1211AB009A6165 /* RecipeNavigationStack.swift in Sources */,
 				4CFD565C2B135EE90004745C /* EmojiBackground.swift in Sources */,
+				4CFB2B2C2B1D144C00C99715 /* Recents.swift in Sources */,
 				4C0C8CE42B11F3E6002ABA4E /* ContentView.swift in Sources */,
-				4C0C8CE62B11F3E6002ABA4E /* Recipe.swift in Sources */,
+				4CFB2B262B1D13D600C99715 /* FavouritesNavigationStack.swift in Sources */,
 				4C496E212B121296009A6165 /* AppDetailColumn.swift in Sources */,
-				4C2A50B62B17DBAF000B6860 /* Schedule.swift in Sources */,
+				4CFB2B282B1D13F000C99715 /* Favourites.swift in Sources */,
+				4C2A50B62B17DBAF000B6860 /* ScheduleView.swift in Sources */,
 				4C0C8CE22B11F3E6002ABA4E /* SizzleApp.swift in Sources */,
 				4C6611332B127B7E0098E337 /* RecipeGrid.swift in Sources */,
 				4C496E1F2B121246009A6165 /* AppSidebarList.swift in Sources */,
@@ -223,6 +425,28 @@
 				4C496E232B1212CF009A6165 /* AppTabView.swift in Sources */,
 				4C496E1A2B12110F009A6165 /* AppScreen.swift in Sources */,
 				4C496E252B121346009A6165 /* PrefersTabNavigationEnvironmentKey.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC3555D2B4B33D100D0CD16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C9093D32B5D3ED5000F96A3 /* ForYouCarousel.swift in Sources */,
+				4CC355662B4B33D100D0CD16 /* ContentView.swift in Sources */,
+				4CC355642B4B33D100D0CD16 /* Sizzle_TVApp.swift in Sources */,
+				4CDEC0262B5B1064003289A0 /* RecipeDetail.swift in Sources */,
+				4C9093CE2B5D3BE6000F96A3 /* RecipeBanner.swift in Sources */,
+				4C9093D82B5D4EE0000F96A3 /* UpNext.swift in Sources */,
+				4CC355772B4B363500D0CD16 /* RecipeGrid.swift in Sources */,
+				4C9093CA2B5D3973000F96A3 /* RecipeNavigationStack.swift in Sources */,
+				4C9093D62B5D4EC9000F96A3 /* UpNextNavigationStack.swift in Sources */,
+				4C9093C42B5D38A7000F96A3 /* AppTabView.swift in Sources */,
+				4C9093C72B5D395A000F96A3 /* Search.swift in Sources */,
+				4C9093C22B5D3846000F96A3 /* AppScreen.swift in Sources */,
+				4C9093CC2B5D39FD000F96A3 /* EmojiBackground.swift in Sources */,
+				4C9093DA2B5D517A000F96A3 /* SearchNavigationStack.swift in Sources */,
+				4C9093D12B5D3EA1000F96A3 /* ForYouNavigationStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -338,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -374,6 +598,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kajatin.roland.Sizzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,9 +633,74 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kajatin.roland.Sizzle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CC355702B4B33D300D0CD16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Sizzle TV/Sizzle_TV.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sizzle TV/Preview Content\"";
+				DEVELOPMENT_TEAM = T2HL3ZXJQU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sizzle TV/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kajatin.roland.Sizzle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.2;
+			};
+			name = Debug;
+		};
+		4CC355712B4B33D300D0CD16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Sizzle TV/Sizzle_TV.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sizzle TV/Preview Content\"";
+				DEVELOPMENT_TEAM = T2HL3ZXJQU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sizzle TV/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.kajatin.roland.Sizzle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.2;
 			};
 			name = Release;
 		};
@@ -433,7 +725,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4CC355722B4B33D300D0CD16 /* Build configuration list for PBXNativeTarget "Sizzle TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC355702B4B33D300D0CD16 /* Debug */,
+				4CC355712B4B33D300D0CD16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4CC355732B4B343800D0CD16 /* RecipeDataContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RecipeDataContainer;
+		};
+		4CEBBD372B3AD37100C6B7DC /* RecipeDataContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RecipeDataContainer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C0C8CD62B11F3E6002ABA4E /* Project object */;
 }

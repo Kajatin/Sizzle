@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RecipeDataContainer
 
 struct AppSidebarList: View {
     @Binding var selection: AppScreen?
@@ -26,5 +27,5 @@ struct AppSidebarList: View {
     } detail: {
         Text(verbatim: "Check out that sidebar!")
     }
-    .modelContainer(for: Recipe.self, inMemory: true)
+    .recipeDataContainer(inMemory: true)
 }

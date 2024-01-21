@@ -6,18 +6,22 @@
 //
 
 import SwiftUI
+import RecipeDataContainer
 
 struct ScheduleNavigationStack: View {
     @State private var path: [Recipe] = []
     
     var body: some View {
-        NavigationStack(path: $path) {
-            Schedule(navigationPath: $path)
-        }
+        EmojiBackground()
+            .overlay {
+                NavigationStack(path: $path) {
+                    ScheduleView(navigationPath: $path)
+                }
+            }
     }
 }
 
 #Preview {
     ScheduleNavigationStack()
-        .modelContainer(for: Recipe.self, inMemory: true)
+        .recipeDataContainer(inMemory: true)
 }

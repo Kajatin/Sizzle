@@ -28,5 +28,5 @@ struct AppDetailColumn: View {
 
 #Preview {
     AppDetailColumn()
-        .modelContainer(for: Recipe.self, inMemory: true)
+        .recipeDataContainer(inMemory: true)
 }

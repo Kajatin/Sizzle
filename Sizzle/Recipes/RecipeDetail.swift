@@ -6,53 +6,56 @@
 //
 
 import SwiftUI
+import RecipeDataContainer
 
 struct RecipeDetail: View {
     let recipe: Recipe
     @Binding var navigationPath: [Recipe]
 
     @State private var showEditSheet = false
+    @State private var showScheduleSheet = false
 
     let spacing: CGFloat = 20 // Define the spacing
 
     var body: some View {
-        ZStack {
-            EmojiBackground()
-                .overlay {
-                    VStack {
-                        RecipeHeader(recipe: recipe)
+        VStack {
+            RecipeHeader(recipe: recipe, showScheduleSheet: $showScheduleSheet)
 
-                        GeometryReader { geometry in
-                            HStack(alignment: .top, spacing: spacing) {
-                                Column1(recipe: recipe)
-                                    .frame(width: (geometry.size.width - spacing) * 2 / 5)
-                                Column2(recipe: recipe)
-                                    .frame(width: (geometry.size.width - spacing) * 3 / 5)
-                            }
-                        }
-                    }
-                    .padding()
-                    .navigationTitle("\(recipe.name)")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button {
-                                showEditSheet = true
-                            } label: {
-                                Label("Edit", systemImage: "pencil")
-                            }
-                        }
-                    }
-                    .sheet(isPresented: $showEditSheet) {
-                        RecipeEditorSheet(recipe: recipe, navigationPath: $navigationPath)
-                    }
+            GeometryReader { geometry in
+                HStack(alignment: .top, spacing: spacing) {
+                    Column1(recipe: recipe)
+                        .frame(width: (geometry.size.width - spacing) * 2 / 5)
+                    Column2(recipe: recipe)
+                        .frame(width: (geometry.size.width - spacing) * 3 / 5)
                 }
+            }
+        }
+        .padding()
+        .navigationTitle("\(recipe.name)")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    showEditSheet = true
+                } label: {
+                    Label("Edit", systemImage: "pencil")
+                }
+            }
+        }
+        .sheet(isPresented: $showEditSheet) {
+            RecipeEditorSheet(recipe: recipe, navigationPath: $navigationPath)
+        }
+        .sheet(isPresented: $showScheduleSheet) {
+            RecipeScheduleSheet(recipe: recipe, navigationPath: $navigationPath)
         }
     }
 }
 
 struct RecipeHeader: View {
     let recipe: Recipe
+    @Binding var showScheduleSheet: Bool
+    
+    @State private var date: Date = .now
 
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
@@ -67,9 +70,9 @@ struct RecipeHeader: View {
                     } label: {
                         Group {
                             if recipe.favorite {
-                                Image(systemName: "star")
-                            } else {
                                 Image(systemName: "star.fill")
+                            } else {
+                                Image(systemName: "star")
                             }
                         }
                         .font(.system(size: 20))
@@ -81,11 +84,19 @@ struct RecipeHeader: View {
             }
 
             Spacer()
-
-            Button {
-
-            } label: {
-                Label("Add to Schedule", systemImage: "list.clipboard")
+            
+            if (recipe.schedule != nil) {
+                Button {
+                    showScheduleSheet = true
+                } label: {
+                    Label("Edit Schedule", systemImage: "list.clipboard")
+                }
+            } else {
+                Button {
+                    showScheduleSheet = true
+                } label: {
+                    Label("Add to Schedule", systemImage: "list.clipboard")
+                }
             }
         }
         .padding()
@@ -327,4 +338,5 @@ struct RecipeParametersUnit: View {
     recipe.cuisineType = .spanish
     recipe.mealType = .lunch
     return RecipeDetail(recipe: recipe, navigationPath: $path)
+        .recipeDataContainer(inMemory: true)
 }

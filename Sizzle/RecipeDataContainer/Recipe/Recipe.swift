@@ -6,47 +6,36 @@
 //
 
 import SwiftUI
-import Foundation
 import SwiftData
+import Foundation
 
 @Model
-final class Recipe: Identifiable {
-    var uuid = UUID()
-    var name: String
-    var summary: String
-    @Attribute(.externalStorage) var image: Data?
-    var difficulty: Difficulty
-    var prepTime: Int
-    var cookingTime: Int
-    var ingredients: [Ingredient]
-    var instructions: [Instruction]
-    var servingSize: Int
-    var cuisineType: Cuisine
-    var mealType: MealType
+public final class Recipe: Identifiable {
+    public var uuid = UUID()
+    public var name: String = "New Recipe"
+    public var summary: String = ""
+    @Attribute(.externalStorage)
+    public var image: Data?
+    public var difficulty: Difficulty = Difficulty.medium
+    public var prepTime: Int = 15
+    public var cookingTime: Int = 60
+    public var ingredients: [Ingredient] = []
+    public var instructions: [Instruction] = []
+    public var servingSize: Int = 4
+    public var cuisineType: Cuisine = Cuisine.other
+    public var mealType: MealType = MealType.other
 //    var keywords: [String]
 //    var allergens: [Allergen]
-    var created: Date
-    var cookedCount: Int
-    var lastPrepared: Date?
-    var favorite: Bool
+    public var created: Date = Date.now
+    public var cookedCount: Int = 0
+    public var lastPrepared: Date?
+    public var favorite: Bool = false
+    public var schedule: Date?
 
-    init() {
-        self.name = "New Recipe"
-        self.summary = ""
-        self.difficulty = .medium
-        self.prepTime = 15
-        self.cookingTime = 60
-        self.ingredients = []
-        self.instructions = []
-        self.servingSize = 4
-        self.cuisineType = .other
-        self.mealType = .other
-        self.created = .now
-        self.cookedCount = 0
-        self.favorite = false
-    }
+    public init() {}
+}
 
-    // static function to create a new example recipe
+public extension Recipe {
     static func example() -> Recipe {
         let recipe = Recipe()
         recipe.name = "Tortilla de Patatas"
@@ -75,82 +64,4 @@ final class Recipe: Identifiable {
         recipe.lastPrepared = .now
         return recipe
     }
-}
-
-enum Difficulty: String, CaseIterable, Identifiable, Codable {
-    case easy
-    case medium
-    case hard
-
-    var id: String { self.rawValue }
-}
-
-enum Cuisine: String, CaseIterable, Identifiable, Codable {
-    case spanish
-    case italian
-    case french
-    case chinese
-    case indian
-    case mexican
-    case japanese
-    case thai
-    case greek
-    case turkish
-    case lebanese
-    case vietnamese
-    case korean
-    case american
-    case british
-    case german
-    case portuguese
-    case swedish
-    case polish
-    case hungarian
-    case russian
-    case irish
-    case scottish
-    case welsh
-    case australian
-    case brazilian
-    case argentinian
-    case peruvian
-    case colombian
-    case venezuelan
-    case chilean
-    case cuban
-    case dominican
-    case haitian
-    case jamaican
-    case puertoRican
-    case salvadoran
-    case uruguayan
-    case other
-
-    var id: String { self.rawValue }
-}
-
-enum MealType: String, CaseIterable, Identifiable, Codable {
-    case breakfast
-    case lunch
-    case dinner
-    case dessert
-    case snack
-    case appetizer
-    case drink
-    case other
-
-    var id: String { self.rawValue }
-}
-
-struct Ingredient: Identifiable, Codable {
-    var id = UUID()
-    var name: String
-    var quantity: Double
-    var unit: String
-}
-
-struct Instruction: Identifiable, Codable {
-    var id = UUID()
-    var title: String
-    var instruction: String
 }

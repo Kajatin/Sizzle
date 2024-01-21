@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RecipeDataContainer
 
 struct AppTabView: View {
     @Binding var selection: AppScreen?
@@ -23,5 +24,5 @@ struct AppTabView: View {
 
 #Preview {
     AppTabView(selection: .constant(.recipes))
-        .modelContainer(for: Recipe.self, inMemory: true)
+        .recipeDataContainer(inMemory: true)
 }

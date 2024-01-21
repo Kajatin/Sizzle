@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import RecipeDataContainer
 
 struct RecipeGrid: View {
     @Binding var navigationPath: [Recipe]
@@ -25,7 +26,7 @@ struct RecipeGrid: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 240))]) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 320))], spacing: 30) {
                 ForEach(searchResults) { recipe in
                     NavigationLink(value: recipe) {
                         RecipeTile(recipe: recipe)
@@ -33,9 +34,13 @@ struct RecipeGrid: View {
                 }
             }
         }
+        .scenePadding()
         .navigationTitle("Recipes")
         .navigationDestination(for: Recipe.self) { recipe in
-            RecipeDetail(recipe: recipe, navigationPath: $navigationPath)
+            EmojiBackground()
+                .overlay {
+                    RecipeDetail(recipe: recipe, navigationPath: $navigationPath)
+                }
         }
         .toolbar {
             ToolbarItem {
@@ -58,38 +63,40 @@ struct RecipeTile: View {
     var recipe: Recipe
     
     var body: some View {
-        Group {
-            if let imageData = recipe.image, let uiImage = UIImage(data: imageData) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFill()
-            } else {
-                Image(systemName: "photo")
-                    .resizable()
-                    .scaledToFit()
-                    .tint(.secondary)
-                    .frame(minWidth: 50, maxWidth: 70, minHeight: 50, maxHeight: 70)
+        VStack {
+            Group {
+                if let imageData = recipe.image, let uiImage = UIImage(data: imageData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                } else {
+                    Image(systemName: "photo")
+                        .resizable()
+                        .scaledToFit()
+                        .tint(.secondary)
+                        .frame(minWidth: 50, maxWidth: 70, minHeight: 50, maxHeight: 70)
+                }
             }
+            .aspectRatio(4/3, contentMode: .fit)
+            .frame(width: 320, height: 240)
+            .background(.regularMaterial)
+            .overlay(alignment: .bottom) {
+                Text(recipe.name)
+                    .font(.title3.bold())
+                    .foregroundColor(.primary)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(.thinMaterial)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.center)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 20))
         }
-        .aspectRatio(1, contentMode: .fit)
-        .frame(width: 240, height: 240)
-        .background(.regularMaterial)
-        .overlay(alignment: .bottom) {
-            Text(recipe.name)
-                .font(.title3.bold())
-                .foregroundColor(.primary)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(.thinMaterial)
-                .lineLimit(2)
-                .multilineTextAlignment(.center)
-        }
-        .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 
 #Preview {
     @State var path: [Recipe] = []
     return RecipeGrid(navigationPath: $path)
-        .modelContainer(for: Recipe.self, inMemory: true)
+        .recipeDataContainer(inMemory: true)
 }

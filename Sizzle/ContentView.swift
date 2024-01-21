@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import RecipeDataContainer
 
 struct ContentView: View {
     @State private var selection: AppScreen? = .recipes
@@ -27,5 +28,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .modelContainer(for: Recipe.self, inMemory: true)
+        .recipeDataContainer(inMemory: true)
 }
