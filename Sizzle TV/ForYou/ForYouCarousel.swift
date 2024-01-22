@@ -17,13 +17,29 @@ struct ForYouCarousel: View {
     var body: some View {
         if !recipes.isEmpty {
             TabView {
-                ForEach(recipes) { recipe in
-                    RecipeBanner(recipe: recipe)
+                ForEach(recipes.shuffled().prefix(10)) { recipe in
+                    NavigationLink(value: recipe) {
+                        RecipeBanner(recipe: recipe)
+                    }
+                    .buttonStyle(
+                        RecipeTileButtonStyle()
+                    )
                 }
             }
             .tabViewStyle(.page)
+            .navigationDestination(for: Recipe.self) { recipe in
+                RecipeDetail(recipe: recipe)
+            }
         } else {
-            ProgressView()
+            EmojiBackground()
+                .overlay {
+                    Text("For You works better if you add recipes")
+                        .font(.title3)
+                        .padding(30)
+                        .background(.thinMaterial)
+                        .clipped()
+                        .cornerRadius(20)
+                }
         }
     }
 }

@@ -12,65 +12,67 @@ import RecipeDataContainer
 struct RecipeGrid: View {
     @Binding var navigationPath: [Recipe]
 
-//    @Environment(\.modelContext) private var modelContext
     @Query(sort: \Recipe.name) private var recipes: [Recipe]
 
     var body: some View {
-        ScrollView {
-            VStack {
-                HSection(title: "Recently Added", recipes: Array(recipes.filter { $0.created > .now.addingTimeInterval(-2_592_000) }.prefix(10)))
-                
-                HSection(title: "Up Next", recipes: recipes.filter { $0.schedule ?? .now > .now })
-
-                HSection(title: "Favorites", recipes: recipes.filter { $0.favorite })
-                
-                HSection(title: "Dinner", recipes: recipes.filter { $0.mealType == .dinner })
-                
-                HSection(title: "Breakfast", recipes: recipes.filter { $0.mealType == .breakfast })
-                
-                HSection(title: "Dessert", recipes: recipes.filter { $0.mealType == .dessert })
-                
-                HSection(title: "Drink", recipes: recipes.filter { $0.mealType == .drink })
-                
-                HSection(title: "Quick & Easy", recipes: recipes.filter { $0.difficulty == .easy })
-
-                VStack(alignment: .leading, spacing: 0) {
-                    Text("Browse")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .foregroundStyle(.secondary)
-
-                    ScrollView {
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 300))], spacing: 50) {
-                            ForEach(recipes) { recipe in
-                                NavigationLink(value: recipe) {
-                                    RecipeTile(recipe: recipe)
+        if recipes.isEmpty {
+            EmojiBackground()
+                .overlay {
+                    Text("Get started by adding some recipes")
+                        .font(.title3)
+                        .padding(30)
+                        .background(.thinMaterial)
+                        .clipped()
+                        .cornerRadius(20)
+                }
+                .padding(30)
+                .ignoresSafeArea(.all)
+        } else {
+            ScrollView {
+                VStack(spacing: 30) {
+                    HSection(title: "Recently Added", recipes: Array(recipes.filter { $0.created > .now.addingTimeInterval(-2_592_000) }.prefix(10)))
+                    
+                    HSection(title: "Up Next", recipes: recipes.filter { $0.schedule ?? .now > .now })
+                    
+                    HSection(title: "Favorites", recipes: recipes.filter { $0.favorite })
+                    
+                    HSection(title: "Dinner", recipes: recipes.filter { $0.mealType == .dinner })
+                    
+                    HSection(title: "Breakfast", recipes: recipes.filter { $0.mealType == .breakfast })
+                    
+                    HSection(title: "Dessert", recipes: recipes.filter { $0.mealType == .dessert })
+                    
+                    HSection(title: "Drink", recipes: recipes.filter { $0.mealType == .drink })
+                    
+                    HSection(title: "Quick & Easy", recipes: recipes.filter { $0.difficulty == .easy })
+                    
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text("Browse")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .foregroundStyle(.secondary)
+                        
+                        ScrollView {
+                            LazyVGrid(columns: [GridItem(.adaptive(minimum: 300))], spacing: 50) {
+                                ForEach(recipes) { recipe in
+                                    NavigationLink(value: recipe) {
+                                        RecipeTile(recipe: recipe)
+                                    }
+                                    .buttonStyle(
+                                        RecipeTileButtonStyle()
+                                    )
                                 }
-                                .buttonStyle(
-                                    RecipeTileButtonStyle()
-                                )
                             }
+                            .padding()
                         }
-                        .padding()
                     }
                 }
             }
+            .scenePadding()
+            .navigationDestination(for: Recipe.self) { recipe in
+                RecipeDetail(recipe: recipe)
+            }
         }
-        .scenePadding()
-        .navigationDestination(for: Recipe.self) { recipe in
-            RecipeDetail(recipe: recipe)
-        }
-//        .onAppear {
-//            modelContext.insert(Recipe.example())
-//            modelContext.insert(Recipe.example())
-//            modelContext.insert(Recipe.example())
-//            modelContext.insert(Recipe.example())
-//            modelContext.insert(Recipe.example())
-//            modelContext.insert(Recipe.example())
-//            modelContext.insert(Recipe.example())
-//            modelContext.insert(Recipe.example())
-//            modelContext.insert(Recipe.example())
-//        }
     }
 }
 
