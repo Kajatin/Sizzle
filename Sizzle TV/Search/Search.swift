@@ -19,7 +19,7 @@ struct Search: View {
         if searchText.isEmpty {
             return []
         } else {
-            return recipes.filter { $0.name.contains(searchText) }
+            return recipes.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
     }
     

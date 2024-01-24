@@ -212,8 +212,8 @@
 		4C9093C52B5D3954000F96A3 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				4C9093C62B5D395A000F96A3 /* Search.swift */,
 				4C9093D92B5D517A000F96A3 /* SearchNavigationStack.swift */,
+				4C9093C62B5D395A000F96A3 /* Search.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
