@@ -209,16 +209,24 @@ struct RecipeIngredients: View {
                 .font(.headline.smallCaps())
                 .padding(.bottom, 4)
 
-            ForEach(ingredients) { ingredient in
-                IngredientRow(ingredient: ingredient)
+            if ingredients.isEmpty {
+                HStack {
+                    Text("No ingredients")
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                }
+            } else {
+                ForEach(ingredients) { ingredient in
+                    IngredientRow(ingredient: ingredient)
+                }
             }
 
-            Button {
-
-            } label: {
-                Label("Add to Shopping List", systemImage: "cart")
-            }
-            .padding(.top, 10)
+//            Button {
+//
+//            } label: {
+//                Label("Add to Shopping List", systemImage: "cart")
+//            }
+//            .padding(.top, 10)
         }
         .padding()
     }
@@ -243,8 +251,6 @@ struct RecipeStats: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-
-
             if (recipe.cookedCount > 0) {
                 Text("Cooked \(recipe.cookedCount) time\(recipe.cookedCount == 1 ? "" : "s")")
                     .foregroundStyle(.secondary)
@@ -276,25 +282,33 @@ struct InstructionsView: View {
                 .font(.headline.smallCaps())
                 .padding(.bottom, 4)
 
-            ForEach(instructions.indices, id: \.self) { index in
-                VStack(alignment: .leading, spacing: 20) {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text("Step \(index + 1)")
-                            .font(.headline)
-                            .foregroundStyle(.secondary)
-
-                        let instruction = instructions[index]
-                        Text(instruction.title)
-                            .font(.title3)
-                            .fontWeight(.semibold)
-
-                        Text(instruction.instruction)
-                            .lineLimit(nil)
-                            .multilineTextAlignment(.leading)
+            if instructions.isEmpty {
+                HStack {
+                    Text("No instructions")
+                        .foregroundStyle(.secondary)
+                    Spacer()
+                }
+            } else {
+                ForEach(instructions.indices, id: \.self) { index in
+                    VStack(alignment: .leading, spacing: 20) {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("Step \(index + 1)")
+                                .font(.headline)
+                                .foregroundStyle(.secondary)
+                            
+                            let instruction = instructions[index]
+                            Text(instruction.title)
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                            
+                            Text(instruction.instruction)
+                                .lineLimit(nil)
+                                .multilineTextAlignment(.leading)
+                        }
+                        
+                        Divider()
+                            .padding(.bottom, 12)
                     }
-
-                    Divider()
-                        .padding(.bottom, 12)
                 }
             }
         }

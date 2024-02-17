@@ -13,24 +13,54 @@ struct RecipeGrid: View {
     @Binding var navigationPath: [Recipe]
     
     @Environment(\.modelContext) private var modelContext
-    @Query(sort: \Recipe.created) private var recipes: [Recipe]
+    @Query(sort: \Recipe.name) private var recipes: [Recipe]
     
     @State private var searchText = ""
     var searchResults: [Recipe] {
         if searchText.isEmpty {
             return recipes
         } else {
-            return recipes.filter { $0.name.contains(searchText) }
+            return recipes.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
     }
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 320))], spacing: 30) {
-                ForEach(searchResults) { recipe in
-                    NavigationLink(value: recipe) {
-                        RecipeTile(recipe: recipe)
+            VStack(spacing: 30) {
+                if searchText.isEmpty {
+                    HSection(title: "Recently Added", recipes: Array(recipes.filter { $0.created > .now.addingTimeInterval(-30 * 24 * 60 * 60) }.prefix(10)))
+                    
+                    HSection(title: "Up Next", recipes: recipes.filter { $0.schedule ?? .now > .now })
+                    
+                    HSection(title: "Favorites", recipes: recipes.filter { $0.favorite })
+                    
+                    HSection(title: "Dinner", recipes: recipes.filter { $0.mealType == .dinner })
+                    
+                    HSection(title: "Breakfast", recipes: recipes.filter { $0.mealType == .breakfast })
+                    
+                    HSection(title: "Dessert", recipes: recipes.filter { $0.mealType == .dessert })
+                    
+                    HSection(title: "Drink", recipes: recipes.filter { $0.mealType == .drink })
+                    
+                    HSection(title: "Quick & Easy", recipes: recipes.filter { $0.difficulty == .easy && ($0.prepTime + $0.cookingTime) < 90 })
+                }
+                
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Browse")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.secondary)
+                    
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 200))], spacing: 30) {
+                            ForEach(searchResults) { recipe in
+                                NavigationLink(value: recipe) {
+                                    RecipeTile(recipe: recipe)
+                                }
+                            }
+                        }
                     }
+                    .padding(.vertical)
                 }
             }
         }
@@ -46,7 +76,7 @@ struct RecipeGrid: View {
             ToolbarItem {
                 Button {
                     withAnimation {
-                        let newRecipe = Recipe.example()
+                        let newRecipe = Recipe()
                         modelContext.insert(newRecipe)
                         navigationPath.append(newRecipe)
                     }
@@ -59,11 +89,38 @@ struct RecipeGrid: View {
     }
 }
 
+struct HSection: View {
+    var title: String
+    var recipes: [Recipe]
+    
+    var body: some View {
+        if !recipes.isEmpty {
+            VStack(alignment: .leading, spacing: 0) {
+                Text(title)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.secondary)
+                
+                ScrollView(.horizontal) {
+                    LazyHStack(spacing: 30) {
+                        ForEach(recipes) { recipe in
+                            NavigationLink(value: recipe) {
+                                RecipeTile(recipe: recipe)
+                            }
+                        }
+                    }
+                    .padding()
+                }
+            }
+        }
+    }
+}
+
 struct RecipeTile: View {
     var recipe: Recipe
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Group {
                 if let imageData = recipe.image, let uiImage = UIImage(data: imageData) {
                     Image(uiImage: uiImage)
@@ -74,23 +131,19 @@ struct RecipeTile: View {
                         .resizable()
                         .scaledToFit()
                         .tint(.secondary)
-                        .frame(minWidth: 50, maxWidth: 70, minHeight: 50, maxHeight: 70)
+                        .frame(minWidth: 30, maxWidth: 50, minHeight: 30, maxHeight: 50)
                 }
             }
-            .aspectRatio(4/3, contentMode: .fit)
-            .frame(width: 320, height: 240)
-            .background(.regularMaterial)
-            .overlay(alignment: .bottom) {
-                Text(recipe.name)
-                    .font(.title3.bold())
-                    .foregroundColor(.primary)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(.thinMaterial)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.center)
-            }
+            .aspectRatio(4/3, contentMode: .fill)
+            .frame(width: 200, height: 150)
+            .background(.thinMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 20))
+            
+            Text(recipe.name)
+                .font(.title3.bold())
+                .foregroundColor(.primary)
+                .lineLimit(2)
+                .frame(width: 200)
         }
     }
 }

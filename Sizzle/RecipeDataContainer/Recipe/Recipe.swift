@@ -13,7 +13,7 @@ import Foundation
 public final class Recipe: Identifiable {
     public var uuid = UUID()
     public var name: String = "New Recipe"
-    public var summary: String = ""
+    public var summary: String = "Summary"
     @Attribute(.externalStorage)
     public var image: Data?
     public var difficulty: Difficulty = Difficulty.medium

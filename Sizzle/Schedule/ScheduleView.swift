@@ -28,7 +28,6 @@ struct ScheduleView: View {
                         
                         return Calendar.current.isDate($0.schedule!, inSameDayAs: day)
                     })
-                    Divider()
                 }
             }
         }
@@ -42,28 +41,32 @@ struct ScheduleRow: View {
     var scheduledRecipes: [Recipe]
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("\(day.formatted(.dateTime.weekday(.wide).day().month(.wide)))")
-                .font(.title)
-                .fontWeight(.medium)
-                .foregroundStyle(.secondary)
-
-            ScrollView(.horizontal) {
-                HStack(spacing: 15) {
-                    ForEach(scheduledRecipes) { recipe in
-                        ScheduleCard(recipe: recipe)
+        if !scheduledRecipes.isEmpty {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("\(day.formatted(.dateTime.weekday(.wide).day().month(.wide)))")
+                    .font(.title)
+                    .fontWeight(.medium)
+                    .foregroundStyle(.secondary)
+                
+                ScrollView(.horizontal) {
+                    HStack(spacing: 15) {
+                        ForEach(scheduledRecipes) { recipe in
+                            ScheduleCard(recipe: recipe)
+                        }
+                        
+                        //                    ScheduleNew(day: day, atLeastOne: scheduledRecipes.count > 0)
                     }
-
-                    ScheduleNew(day: day, atLeastOne: scheduledRecipes.count > 0)
                 }
             }
+            Divider()
         }
     }
 }
 
 struct ScheduleCard: View {
     var recipe: Recipe
-
+    
+    @State var path: [Recipe] = []
     @Environment(\.modelContext) private var modelContext
 
     var body: some View {
@@ -108,17 +111,20 @@ struct ScheduleCard: View {
             .background(.regularMaterial)
             .overlay(alignment: .topTrailing) {
                 Menu {
-                    Button {
-
+                    NavigationLink {
+                        EmojiBackground()
+                            .overlay {
+                                RecipeDetail(recipe: recipe, navigationPath: $path)
+                            }
                     } label: {
                         Label("View Recipe", systemImage: "book.pages")
                     }
 
-                    Button {
-
-                    } label: {
-                        Label("Add to Shopping List", systemImage: "cart")
-                    }
+//                    Button {
+//
+//                    } label: {
+//                        Label("Add to Shopping List", systemImage: "cart")
+//                    }
 
                     Button(role: .destructive) {
                         withAnimation {
