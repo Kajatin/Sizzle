@@ -23,6 +23,8 @@ struct RecipeNavigationStack: View {
 }
 
 #Preview {
-    RecipeNavigationStack()
-        .recipeDataContainer(inMemory: true)
+    NavigationStack {
+        RecipeNavigationStack()
+            .recipeDataContainer(inMemory: true)
+    }
 }

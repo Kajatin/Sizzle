@@ -16,7 +16,7 @@ struct AppDetailColumn: View {
             if let screen {
                 screen.destination
             } else {
-                ContentUnavailableView("Select a Recipe", systemImage: "bird", description: Text("Pick something from the list."))
+                ContentUnavailableView("Select a Recipe", systemImage: "book.pages", description: Text("Pick something from the list."))
             }
         }
 #if os(macOS)

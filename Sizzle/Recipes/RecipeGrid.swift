@@ -86,6 +86,12 @@ struct RecipeGrid: View {
             }
         }
         .searchable(text: $searchText, prompt: "Find a recipe")
+//        .onAppear {
+//            modelContext.insert(Recipe.example())
+//            modelContext.insert(Recipe.example())
+//            modelContext.insert(Recipe.example())
+//            modelContext.insert(Recipe.example())
+//        }
     }
 }
 
@@ -127,11 +133,20 @@ struct RecipeTile: View {
                         .resizable()
                         .scaledToFill()
                 } else {
-                    Image(systemName: "photo")
+                    Image(systemName: "book.pages")
                         .resizable()
                         .scaledToFit()
                         .tint(.secondary)
                         .frame(minWidth: 30, maxWidth: 50, minHeight: 30, maxHeight: 50)
+//                    AsyncImage(url: URL(string: "https://spanishsabores.com/wp-content/uploads/2023/07/Tortilla-de-Patatas-Featured.jpg")) { p in
+//                        switch p {
+//                        case .success(let image):
+//                            image.resizable().renderingMode(.original)
+//                                .scaledToFill()
+//                        default:
+//                            ProgressView()
+//                        }
+//                    }
                 }
             }
             .aspectRatio(4/3, contentMode: .fill)
@@ -150,6 +165,8 @@ struct RecipeTile: View {
 
 #Preview {
     @State var path: [Recipe] = []
-    return RecipeGrid(navigationPath: $path)
-        .recipeDataContainer(inMemory: true)
+    return NavigationStack {
+        RecipeGrid(navigationPath: $path)
+            .recipeDataContainer(inMemory: true)
+    }
 }

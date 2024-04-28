@@ -17,9 +17,13 @@ struct ContentView: View {
         if prefersTabNavigation {
             AppTabView(selection: $selection)
         } else {
-            NavigationSplitView {
-                AppSidebarList(selection: $selection)
-            } detail: {
+//            NavigationSplitView {
+//                AppSidebarList(selection: $selection)
+//            } detail: {
+//                AppDetailColumn(screen: selection)
+//            }
+            
+            NavigationStack {
                 AppDetailColumn(screen: selection)
             }
         }

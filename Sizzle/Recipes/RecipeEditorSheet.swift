@@ -191,14 +191,14 @@ struct FluidStepper: View {
     }
     
     private func incrementStep() {
-        startResetTimer()
-        updateStepValue()
+//        startResetTimer()
+//        updateStepValue()
         value += stepValue
     }
     
     private func decrementStep() {
-        startResetTimer()
-        updateStepValue()
+//        startResetTimer()
+//        updateStepValue()
         value = max(0, value - stepValue)
     }
     

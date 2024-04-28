@@ -11,7 +11,7 @@ enum AppScreen: Codable, Hashable, Identifiable, CaseIterable {
     case recipes
 //    case favourites
 //    case recents
-    case schedule
+//    case schedule
     
     var id: AppScreen { self }
 }
@@ -26,8 +26,8 @@ extension AppScreen {
 //            Label("Favourites", systemImage: "heart")
 //        case .recents:
 //            Label("Recents", systemImage: "clock")
-        case .schedule:
-            Label("Schedule", systemImage: "calendar")
+//        case .schedule:
+//            Label("Schedule", systemImage: "calendar")
         }
     }
     
@@ -40,8 +40,8 @@ extension AppScreen {
 //            FavouritesNavigationStack()
 //        case .recents:
 //            RecentsNavigationStack()
-        case .schedule:
-            ScheduleNavigationStack()
+//        case .schedule:
+//            ScheduleNavigationStack()
         }
     }
 }

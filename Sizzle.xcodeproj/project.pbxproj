@@ -24,6 +24,7 @@
 		4C6611312B127A7E0098E337 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6611302B127A7E0098E337 /* RecipeDetail.swift */; };
 		4C6611332B127B7E0098E337 /* RecipeGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6611322B127B7E0098E337 /* RecipeGrid.swift */; };
 		4C85B3412B2DCE8C003DC1A2 /* RecipeScheduleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C85B3402B2DCE8C003DC1A2 /* RecipeScheduleSheet.swift */; };
+		4C8DD9EC2B83F0F90013C7C3 /* Decor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8DD9EB2B83F0F90013C7C3 /* Decor.swift */; };
 		4C9093C22B5D3846000F96A3 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C12B5D3846000F96A3 /* AppScreen.swift */; };
 		4C9093C42B5D38A7000F96A3 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C32B5D38A7000F96A3 /* AppTabView.swift */; };
 		4C9093C72B5D395A000F96A3 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C62B5D395A000F96A3 /* Search.swift */; };
@@ -35,6 +36,8 @@
 		4C9093D62B5D4EC9000F96A3 /* UpNextNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D52B5D4EC9000F96A3 /* UpNextNavigationStack.swift */; };
 		4C9093D82B5D4EE0000F96A3 /* UpNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D72B5D4EE0000F96A3 /* UpNext.swift */; };
 		4C9093DA2B5D517A000F96A3 /* SearchNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D92B5D517A000F96A3 /* SearchNavigationStack.swift */; };
+		4C946DBF2B86980C001E7581 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C946DBE2B86980C001E7581 /* Fredoka.ttf */; };
+		4C946DC02B86980C001E7581 /* Fredoka.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C946DBE2B86980C001E7581 /* Fredoka.ttf */; };
 		4CC355642B4B33D100D0CD16 /* Sizzle_TVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC355632B4B33D100D0CD16 /* Sizzle_TVApp.swift */; };
 		4CC355662B4B33D100D0CD16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC355652B4B33D100D0CD16 /* ContentView.swift */; };
 		4CC3556A2B4B33D300D0CD16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC355692B4B33D300D0CD16 /* Assets.xcassets */; };
@@ -71,6 +74,7 @@
 		4C6611302B127A7E0098E337 /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		4C6611322B127B7E0098E337 /* RecipeGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeGrid.swift; sourceTree = "<group>"; };
 		4C85B3402B2DCE8C003DC1A2 /* RecipeScheduleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeScheduleSheet.swift; sourceTree = "<group>"; };
+		4C8DD9EB2B83F0F90013C7C3 /* Decor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decor.swift; sourceTree = "<group>"; };
 		4C9093C12B5D3846000F96A3 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		4C9093C32B5D38A7000F96A3 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		4C9093C62B5D395A000F96A3 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		4C9093D52B5D4EC9000F96A3 /* UpNextNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpNextNavigationStack.swift; sourceTree = "<group>"; };
 		4C9093D72B5D4EE0000F96A3 /* UpNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpNext.swift; sourceTree = "<group>"; };
 		4C9093D92B5D517A000F96A3 /* SearchNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationStack.swift; sourceTree = "<group>"; };
+		4C946DBE2B86980C001E7581 /* Fredoka.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fredoka.ttf; sourceTree = "<group>"; };
 		4CC355612B4B33D100D0CD16 /* Sizzle TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sizzle TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC355632B4B33D100D0CD16 /* Sizzle_TVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizzle_TVApp.swift; sourceTree = "<group>"; };
 		4CC355652B4B33D100D0CD16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 		4C0C8CD52B11F3E6002ABA4E = {
 			isa = PBXGroup;
 			children = (
+				4C946DBD2B8697F5001E7581 /* Font */,
 				4CEBBD352B3ACFEF00C6B7DC /* RecipeDataContainer */,
 				4C0C8CE02B11F3E6002ABA4E /* Sizzle */,
 				4CC355622B4B33D100D0CD16 /* Sizzle TV */,
@@ -151,6 +157,7 @@
 				4C0C8CE32B11F3E6002ABA4E /* ContentView.swift */,
 				4C496E242B121346009A6165 /* PrefersTabNavigationEnvironmentKey.swift */,
 				4CFD565B2B135EE90004745C /* EmojiBackground.swift */,
+				4C8DD9EB2B83F0F90013C7C3 /* Decor.swift */,
 				4C0C8CE72B11F3E7002ABA4E /* Assets.xcassets */,
 				4C0C8CEC2B11F3E7002ABA4E /* Sizzle.entitlements */,
 				4C0C8CED2B11F3E7002ABA4E /* Info.plist */,
@@ -245,6 +252,14 @@
 				4C9093D72B5D4EE0000F96A3 /* UpNext.swift */,
 			);
 			path = UpNext;
+			sourceTree = "<group>";
+		};
+		4C946DBD2B8697F5001E7581 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4C946DBE2B86980C001E7581 /* Fredoka.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		4CC355622B4B33D100D0CD16 /* Sizzle TV */ = {
@@ -385,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0C8CEB2B11F3E7002ABA4E /* Preview Assets.xcassets in Resources */,
+				4C946DBF2B86980C001E7581 /* Fredoka.ttf in Resources */,
 				4C0C8CE82B11F3E7002ABA4E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC3556D2B4B33D300D0CD16 /* Preview Assets.xcassets in Resources */,
+				4C946DC02B86980C001E7581 /* Fredoka.ttf in Resources */,
 				4CC3556A2B4B33D300D0CD16 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +436,7 @@
 				4C0C8CE22B11F3E6002ABA4E /* SizzleApp.swift in Sources */,
 				4C6611332B127B7E0098E337 /* RecipeGrid.swift in Sources */,
 				4C496E1F2B121246009A6165 /* AppSidebarList.swift in Sources */,
+				4C8DD9EC2B83F0F90013C7C3 /* Decor.swift in Sources */,
 				4C6611312B127A7E0098E337 /* RecipeDetail.swift in Sources */,
 				4C66112F2B12563F0098E337 /* RecipeEditorSheet.swift in Sources */,
 				4C019F8D2B1686A800D47272 /* CameraPicker.swift in Sources */,
@@ -585,12 +603,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sizzle/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sizzle;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Add photos of your meals to the recipes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -603,7 +622,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -620,12 +639,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sizzle/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sizzle;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Add photos of your meals to the recipes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -638,7 +658,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

@@ -85,19 +85,19 @@ struct RecipeHeader: View {
 
             Spacer()
             
-            if (recipe.schedule != nil) {
-                Button {
-                    showScheduleSheet = true
-                } label: {
-                    Label("Edit Schedule", systemImage: "list.clipboard")
-                }
-            } else {
-                Button {
-                    showScheduleSheet = true
-                } label: {
-                    Label("Add to Schedule", systemImage: "list.clipboard")
-                }
-            }
+//            if (recipe.schedule != nil) {
+//                Button {
+//                    showScheduleSheet = true
+//                } label: {
+//                    Label("Edit Schedule", systemImage: "list.clipboard")
+//                }
+//            } else {
+//                Button {
+//                    showScheduleSheet = true
+//                } label: {
+//                    Label("Add to Schedule", systemImage: "list.clipboard")
+//                }
+//            }
         }
         .padding()
         .background(.thinMaterial)
@@ -178,7 +178,7 @@ struct RecipeInfo: View {
             Divider()
 
             Text(recipe.summary)
-                .font(.title3)
+                .font(.body)
                 .multilineTextAlignment(.center)
                 .padding()
         }
@@ -216,8 +216,8 @@ struct RecipeIngredients: View {
                     Spacer()
                 }
             } else {
-                ForEach(ingredients) { ingredient in
-                    IngredientRow(ingredient: ingredient)
+                ForEach(ingredients.indices, id: \.self) { idx in
+                    IngredientRow(ingredient: ingredients[idx], divider: idx < ingredients.count - 1)
                 }
             }
 
@@ -234,6 +234,7 @@ struct RecipeIngredients: View {
 
 struct IngredientRow: View {
     var ingredient: Ingredient
+    var divider: Bool
 
     var body: some View {
         HStack {
@@ -242,7 +243,10 @@ struct IngredientRow: View {
             Text("\(ingredient.quantity, specifier: "%.0f") \(ingredient.unit)")
         }
         .padding(.vertical, 2)
-        Divider()
+        
+        if divider {
+            Divider()
+        }
     }
 }
 
@@ -306,8 +310,10 @@ struct InstructionsView: View {
                                 .multilineTextAlignment(.leading)
                         }
                         
-                        Divider()
-                            .padding(.bottom, 12)
+                        if (index < instructions.count - 1) {
+                            Divider()
+                                .padding(.bottom, 12)
+                        }
                     }
                 }
             }
