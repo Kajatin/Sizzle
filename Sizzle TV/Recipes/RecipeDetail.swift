@@ -18,41 +18,38 @@ struct RecipeDetail: View {
     let spacing: CGFloat = 20
 
     var body: some View {
-        EmojiBackground()
-            .overlay {
-                VStack {
-                    HStack(alignment: .center) {
-                        RecipeHeader(recipe: recipe)
+        VStack {
+            HStack(alignment: .center) {
+                RecipeHeader(recipe: recipe)
 
-                        Spacer()
+                Spacer()
 
-                        HStack(alignment: .center) {
-                            Button {
-                                showScheduleSheet = true
-                            } label: {
-                                Label("Add to Schedule", systemImage: "list.clipboard")
-                            }
-
-                            Button {
-                                showEditSheet = true
-                            } label: {
-                                Label("More", systemImage: "ellipsis")
-                                    .labelStyle(.titleOnly)
-                            }
-                        }
+                HStack(alignment: .center) {
+                    Button {
+                        showScheduleSheet = true
+                    } label: {
+                        Label("Add to Schedule", systemImage: "list.clipboard")
                     }
 
-                    GeometryReader { geometry in
-                        HStack(alignment: .top, spacing: spacing) {
-                            Column1(recipe: recipe)
-                                .frame(width: (geometry.size.width - spacing) * 2 / 5)
-                            Spacer()
-                            Column2(recipe: recipe)
-                                .frame(width: (geometry.size.width - spacing) * 3 / 5)
-                        }
+                    Button {
+                        showEditSheet = true
+                    } label: {
+                        Label("More", systemImage: "ellipsis")
+                            .labelStyle(.titleOnly)
                     }
                 }
             }
+
+            GeometryReader { geometry in
+                HStack(alignment: .top, spacing: spacing) {
+                    Column1(recipe: recipe)
+                        .frame(width: (geometry.size.width - spacing) * 2 / 5)
+                    Spacer()
+                    Column2(recipe: recipe)
+                        .frame(width: (geometry.size.width - spacing) * 3 / 5)
+                }
+            }
+        }
         .sheet(isPresented: $showEditSheet) {
             VStack {
                 Button {

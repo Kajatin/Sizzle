@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RecipeDataContainer
+import SwiftData
 
 struct RecipeDetail: View {
     let recipe: Recipe
@@ -261,7 +262,7 @@ struct RecipeStats: View {
             }
 
             if let lastPrepared = recipe.lastPrepared {
-                Text("Last prepared \(lastPrepared.formatted(date: .long, time: .shortened))")
+                Text("Last prepared on \(lastPrepared.formatted(date: .long, time: .shortened))")
                     .foregroundStyle(.secondary)
             }
 
@@ -353,10 +354,22 @@ struct RecipeParametersUnit: View {
 }
 
 #Preview {
-    @State var path: [Recipe] = []
-    let recipe = Recipe.example()
-    recipe.cuisineType = .spanish
-    recipe.mealType = .lunch
-    return RecipeDetail(recipe: recipe, navigationPath: $path)
-        .recipeDataContainer(inMemory: true)
+    do {
+        @State var path: [Recipe] = []
+        let schema = Schema([
+            Recipe.self,
+        ])
+        let configuration = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try! ModelContainer(for: schema, configurations: [configuration])
+        
+        let recipe = Recipe.example()
+        recipe.cuisineType = .spanish
+        recipe.mealType = .lunch
+        return NavigationStack {
+            RecipeDetail(recipe: recipe, navigationPath: $path)
+                .modelContainer(container)
+        }
+    } catch {
+        fatalError("Failed to create model context.")
+    }
 }

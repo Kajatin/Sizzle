@@ -16,17 +16,12 @@ struct RecipeGrid: View {
 
     var body: some View {
         if recipes.isEmpty {
-            EmojiBackground()
-                .overlay {
-                    Text("Get started by adding some recipes")
-                        .font(.title3)
-                        .padding(30)
-                        .background(.thinMaterial)
-                        .clipped()
-                        .cornerRadius(20)
-                }
+            Text("Get started by adding some recipes")
+                .font(.title3)
                 .padding(30)
-                .ignoresSafeArea(.all)
+                .background(.thinMaterial)
+                .clipped()
+                .cornerRadius(20)
         } else {
             ScrollView {
                 VStack(spacing: 30) {

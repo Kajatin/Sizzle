@@ -19,10 +19,10 @@ struct ForYouCarousel: View {
             TabView {
                 ForEach(recipes.shuffled().prefix(10)) { recipe in
                     NavigationLink(value: recipe) {
-                        RecipeBanner(recipe: recipe)
+                        RecipeBanner(recipe: recipe, navigationPath: $navigationPath)
                     }
                     .buttonStyle(
-                        RecipeTileButtonStyle()
+                        ForYouTileButtonStyle()
                     )
                 }
             }
@@ -31,16 +31,21 @@ struct ForYouCarousel: View {
                 RecipeDetail(recipe: recipe)
             }
         } else {
-            EmojiBackground()
-                .overlay {
-                    Text("For You works better if you add recipes")
-                        .font(.title3)
-                        .padding(30)
-                        .background(.thinMaterial)
-                        .clipped()
-                        .cornerRadius(20)
-                }
+            Text("For You works better if you add recipes")
+                .font(.title3)
+                .padding(30)
+                .background(.thinMaterial)
+                .clipped()
+                .cornerRadius(20)
         }
+    }
+}
+
+struct ForYouTileButtonStyle: PrimitiveButtonStyle {
+    @FocusState private var isFocused: Bool
+    
+    func makeBody(configuration: CardButtonStyle.Configuration) -> some View {
+        configuration.label
     }
 }
 

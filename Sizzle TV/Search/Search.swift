@@ -37,10 +37,7 @@ struct Search: View {
             }
         }
         .navigationDestination(for: Recipe.self) { recipe in
-            EmojiBackground()
-                .overlay {
-                    RecipeDetail(recipe: recipe)
-                }
+            RecipeDetail(recipe: recipe)
         }
         .searchable(text: $searchText, prompt: "Find a recipe")
     }
