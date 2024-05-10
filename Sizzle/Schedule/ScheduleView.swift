@@ -112,10 +112,7 @@ struct ScheduleCard: View {
             .overlay(alignment: .topTrailing) {
                 Menu {
                     NavigationLink {
-                        EmojiBackground()
-                            .overlay {
-                                RecipeDetail(recipe: recipe, navigationPath: $path)
-                            }
+                        RecipeDetail(recipe: recipe, navigationPath: $path)
                     } label: {
                         Label("View Recipe", systemImage: "book.pages")
                     }
