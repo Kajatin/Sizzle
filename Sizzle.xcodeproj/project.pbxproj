@@ -29,7 +29,6 @@
 		4C9093C42B5D38A7000F96A3 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C32B5D38A7000F96A3 /* AppTabView.swift */; };
 		4C9093C72B5D395A000F96A3 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C62B5D395A000F96A3 /* Search.swift */; };
 		4C9093CA2B5D3973000F96A3 /* RecipeNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093C92B5D3973000F96A3 /* RecipeNavigationStack.swift */; };
-		4C9093CC2B5D39FD000F96A3 /* EmojiBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093CB2B5D39FD000F96A3 /* EmojiBackground.swift */; };
 		4C9093CE2B5D3BE6000F96A3 /* RecipeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093CD2B5D3BE6000F96A3 /* RecipeBanner.swift */; };
 		4C9093D12B5D3EA1000F96A3 /* ForYouNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D02B5D3EA1000F96A3 /* ForYouNavigationStack.swift */; };
 		4C9093D32B5D3ED5000F96A3 /* ForYouCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D22B5D3ED5000F96A3 /* ForYouCarousel.swift */; };
@@ -90,7 +89,6 @@
 		4C9093C32B5D38A7000F96A3 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		4C9093C62B5D395A000F96A3 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		4C9093C92B5D3973000F96A3 /* RecipeNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeNavigationStack.swift; sourceTree = "<group>"; };
-		4C9093CB2B5D39FD000F96A3 /* EmojiBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBackground.swift; sourceTree = "<group>"; };
 		4C9093CD2B5D3BE6000F96A3 /* RecipeBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBanner.swift; sourceTree = "<group>"; };
 		4C9093D02B5D3EA1000F96A3 /* ForYouNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouNavigationStack.swift; sourceTree = "<group>"; };
 		4C9093D22B5D3ED5000F96A3 /* ForYouCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouCarousel.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 				4C9093C02B5D383E000F96A3 /* Navigation */,
 				4CC355632B4B33D100D0CD16 /* Sizzle_TVApp.swift */,
 				4CC355652B4B33D100D0CD16 /* ContentView.swift */,
-				4C9093CB2B5D39FD000F96A3 /* EmojiBackground.swift */,
 				4CC355692B4B33D300D0CD16 /* Assets.xcassets */,
 				4CC3556E2B4B33D300D0CD16 /* Sizzle_TV.entitlements */,
 				4CC3556F2B4B33D300D0CD16 /* Info.plist */,
@@ -462,7 +459,6 @@
 				4C9093C42B5D38A7000F96A3 /* AppTabView.swift in Sources */,
 				4C9093C72B5D395A000F96A3 /* Search.swift in Sources */,
 				4C9093C22B5D3846000F96A3 /* AppScreen.swift in Sources */,
-				4C9093CC2B5D39FD000F96A3 /* EmojiBackground.swift in Sources */,
 				4C9093DA2B5D517A000F96A3 /* SearchNavigationStack.swift in Sources */,
 				4C9093D12B5D3EA1000F96A3 /* ForYouNavigationStack.swift in Sources */,
 			);

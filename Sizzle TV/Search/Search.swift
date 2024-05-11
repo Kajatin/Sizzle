@@ -12,21 +12,34 @@ import RecipeDataContainer
 struct Search: View {
     @Binding var navigationPath: [Recipe]
     
-    @Query(sort: \Recipe.created) private var recipes: [Recipe]
-    
     @State private var searchText = ""
-    var searchResults: [Recipe] {
-        if searchText.isEmpty {
-            return []
-        } else {
-            return recipes.filter { $0.name.lowercased().contains(searchText.lowercased()) }
-        }
+    
+    var body: some View {
+        SearchResult(navigationPath: $navigationPath, searchText: searchText)
+        .searchable(text: $searchText, prompt: "Find a recipe")
+    }
+}
+
+struct SearchResult: View {
+    @Binding var navigationPath: [Recipe]
+    
+    @Query private var recipes: [Recipe]
+    
+    init(navigationPath: Binding<[Recipe]>, searchText: String) {
+        _navigationPath = navigationPath
+        _recipes = Query(filter: #Predicate {
+            if searchText.isEmpty {
+                return false
+            } else {
+                return $0.name.localizedStandardContains(searchText)
+            }
+        })
     }
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 320))], spacing: 30) {
-                ForEach(searchResults) { recipe in
+                ForEach(recipes) { recipe in
                     NavigationLink(value: recipe) {
                         RecipeTile(recipe: recipe)
                     }
@@ -39,7 +52,6 @@ struct Search: View {
         .navigationDestination(for: Recipe.self) { recipe in
             RecipeDetail(recipe: recipe)
         }
-        .searchable(text: $searchText, prompt: "Find a recipe")
     }
 }
 
