@@ -38,16 +38,17 @@ struct RecipeBanner: View {
             }
             
             VStack(alignment: .leading, spacing: 8) {
-                HStack(alignment: .center) {
+                HStack(alignment: .firstTextBaseline) {
                     Text("\(recipe.name)")
                         .font(.title)
+                        .lineLimit(1)
                     
                     Spacer()
                     
                     Button {
                         navigationPath.append(recipe)
                     } label: {
-                        Text("Go to Recipe")
+                        Text("View Recipe")
                     }
                     .focused($isFocused)
                 }
@@ -59,9 +60,13 @@ struct RecipeBanner: View {
                     .padding(.top)
                     .lineLimit(2)
             }
-            .padding([.top, .horizontal], 40)
-            .padding(.bottom, 60)
-            .background(.thinMaterial)
+            .padding(.horizontal, 40)
+            .padding(.vertical, 65)
+            .background(
+                LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0.0), Color.black.opacity(0.65), Color.black.opacity(0.85)]),
+                               startPoint: .top,
+                               endPoint: .bottom)
+            )
         }
         .edgesIgnoringSafeArea(.all)
         .onAppear {

@@ -12,7 +12,7 @@ import RecipeDataContainer
 struct ForYouCarousel: View {
     @Binding var navigationPath: [Recipe]
     
-    @Query(sort: \Recipe.created) private var recipes: [Recipe]
+    @Query private var recipes: [Recipe]
     
     var body: some View {
         if !recipes.isEmpty {
@@ -21,9 +21,7 @@ struct ForYouCarousel: View {
                     NavigationLink(value: recipe) {
                         RecipeBanner(recipe: recipe, navigationPath: $navigationPath)
                     }
-                    .buttonStyle(
-                        ForYouTileButtonStyle()
-                    )
+                    .buttonStyle(ForYouTileButtonStyle())
                 }
             }
             .tabViewStyle(.page)
