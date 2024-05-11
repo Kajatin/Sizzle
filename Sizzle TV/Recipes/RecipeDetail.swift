@@ -10,7 +10,7 @@ import SwiftData
 import RecipeDataContainer
 
 struct RecipeDetail: View {
-    let recipe: Recipe
+    @Bindable var recipe: Recipe
 
     @State private var showEditSheet = false
     @State private var showScheduleSheet = false
@@ -58,10 +58,10 @@ struct RecipeDetail: View {
                     Label(recipe.favorite ? "Remove from Favourites" : "Add to Favourites", systemImage: recipe.favorite ? "star.fill" : "star")
                 }
 
-                Button {
-                } label: {
-                    Label("Add to Shopping List", systemImage: "cart")
-                }
+//                Button {
+//                } label: {
+//                    Label("Add to Shopping List", systemImage: "cart")
+//                }
 
                 Button {
                     recipe.cookedCount += 1
@@ -81,10 +81,10 @@ struct RecipeDetail: View {
                             .foregroundStyle(.secondary)
                     }
 
-                    if let nextSchedule = recipe.schedule {
-                        Text("Scheduled for \(nextSchedule.formatted(date: .long, time: .shortened))")
-                            .foregroundStyle(.secondary)
-                    }
+//                    if let nextSchedule = recipe.schedule {
+//                        Text("Scheduled for \(nextSchedule.formatted(date: .long, time: .shortened))")
+//                            .foregroundStyle(.secondary)
+//                    }
                 }
                 .padding(.top)
             }
@@ -405,9 +405,24 @@ struct RecipeParametersUnit: View {
     }
 }
 
-//#Preview {
-//    RecipeDetail()
-//        .modelContainer(for: Recipe.self, inMemory: true)
-////        .recipeDataContainer(inMemory: true)
-//}
+#Preview {
+    do {
+        @State var path: [Recipe] = []
+        let schema = Schema([
+            Recipe.self,
+        ])
+        let configuration = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try! ModelContainer(for: schema, configurations: [configuration])
+        
+        let recipe = Recipe.example()
+        recipe.cuisineType = .spanish
+        recipe.mealType = .lunch
+        return NavigationStack {
+            RecipeDetail(recipe: recipe)
+                .modelContainer(container)
+        }
+    } catch {
+        fatalError("Failed to create model context.")
+    }
+}
 

@@ -112,7 +112,7 @@ struct RecipeTile: View {
                         .resizable()
                         .scaledToFill()
                 } else {
-                    Image(systemName: "photo")
+                    Image(systemName: "book.pages")
                         .resizable()
                         .scaledToFill()
                         .tint(.secondary)
@@ -127,6 +127,7 @@ struct RecipeTile: View {
 //                    }
                 }
             }
+            .hoverEffect(.highlight)
             .aspectRatio(4/3, contentMode: .fill)
             .frame(width: 300, height: 225)
             .background(.thinMaterial)
