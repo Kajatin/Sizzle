@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "background-2-no-alpha.png",
       "idiom" : "tv",
       "scale" : "1x"
     },
     {
+      "filename" : "background-3-no-alpha.png",
       "idiom" : "tv",
       "scale" : "2x"
     }
