@@ -360,7 +360,7 @@ struct RecipeParametersUnit: View {
             Recipe.self,
         ])
         let configuration = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try! ModelContainer(for: schema, configurations: [configuration])
+        let container = try ModelContainer(for: schema, configurations: [configuration])
         
         let recipe = Recipe.example()
         recipe.cuisineType = .spanish
