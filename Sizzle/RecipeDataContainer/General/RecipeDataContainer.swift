@@ -7,24 +7,23 @@
 
 import OSLog
 import SwiftUI
-import SwiftData
 
 private let logger = Logger(subsystem: "RecipeDataContainer", category: "General")
 
 struct RecipeDataContainerViewModifier: ViewModifier {
-    let container: ModelContainer
+    let manager: ModelContainerManager
     
     init(inMemory: Bool) {
-        let schema = Schema([
-            Recipe.self,
-        ])
-        let configuration = ModelConfiguration(isStoredInMemoryOnly: inMemory)
-        container = try! ModelContainer(for: schema, configurations: [configuration])
+        if inMemory {
+            manager = ModelContainerManager.sharedInMemory
+        } else {
+            manager = ModelContainerManager.shared
+        }
     }
     
     func body(content: Content) -> some View {
         content
-            .modelContainer(container)
+            .modelContainer(manager.container)
     }
 }
 

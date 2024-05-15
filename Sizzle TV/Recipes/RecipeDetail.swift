@@ -25,11 +25,11 @@ struct RecipeDetail: View {
                 Spacer()
 
                 HStack(alignment: .center) {
-                    Button {
-                        showScheduleSheet = true
-                    } label: {
-                        Label("Add to Schedule", systemImage: "list.clipboard")
-                    }
+//                    Button {
+//                        showScheduleSheet = true
+//                    } label: {
+//                        Label("Add to Schedule", systemImage: "list.clipboard")
+//                    }
 
                     Button {
                         showEditSheet = true

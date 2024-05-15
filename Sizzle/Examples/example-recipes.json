@@ -1,0 +1,388 @@
+[
+    {
+        "name": "Tortilla de Patatas",
+        "summary": "Torilla de patatas is a traditional Spanish dish consisting of an egg omelette made with potatoes and fried in olive oil. It is considered a national dish of Spain, and is regularly served as a tapa.",
+        "difficulty": "easy",
+        "prepTime": 15,
+        "cookingTime": 60,
+        "ingredients": [
+            {
+                "id": "83A4E4BC-17D7-483D-888D-559AE9E0549B",
+                "name": "Potatoes",
+                "quantity": 500,
+                "unit": "g"
+            },
+            {
+                "id": "45F871B9-F817-44B5-9817-14077E56FB2A",
+                "name": "Eggs",
+                "quantity": 6,
+                "unit": ""
+            },
+            {
+                "id": "4D062857-BA79-4FAE-B517-05BEF2B750DB",
+                "name": "Onion",
+                "quantity": 1,
+                "unit": ""
+            },
+            {
+                "id": "0379DBF8-4325-4683-82FD-1D73D56F63E2",
+                "name": "Olive Oil",
+                "quantity": 250,
+                "unit": "ml"
+            },
+            {
+                "id": "2B030035-9932-450A-B664-A918121D06C0",
+                "name": "Salt",
+                "quantity": 1,
+                "unit": "pinch"
+            }
+        ],
+        "instructions": [
+            {
+                "id": "18F59711-55B3-4BD6-A94D-65FD035C5064",
+                "title": "Peel and slice the potatoes",
+                "instruction": "Peel the potatoes and cut them into thin slices. Peel and slice the onion."
+            },
+            {
+                "id": "F0A9AD7D-0FAF-4690-AE7E-BFA758F0C7DF",
+                "title": "Fry the potatoes and onion",
+                "instruction": "Heat the oil in a non-stick frying pan and add the potatoes and onion. Cook over a low heat for 30 minutes, stirring occasionally. The potatoes should be soft but not brown."
+            },
+            {
+                "id": "B6029AC8-8A6F-434C-A2FA-3EE1550358CC",
+                "title": "Beat the eggs",
+                "instruction": "Break the eggs into a large bowl and beat them lightly with a fork. Add a pinch of salt."
+            },
+            {
+                "id": "B034E9B6-2033-45BC-8846-349ED2B7C39B",
+                "title": "Add the potatoes and onion",
+                "instruction": "When the potatoes and onion are cooked, drain them in a colander set over a bowl to collect the oil. Add them to the eggs and mix well."
+            },
+            {
+                "id": "73A60D31-B425-46EF-81DC-BB5E4968DC66",
+                "title": "Cook the tortilla",
+                "instruction": "Heat 2 tablespoons of the oil in a non-stick frying pan. When the oil is hot, add the egg mixture, spreading it out evenly. Cook over a low heat for 4-5 minutes, shaking the pan occasionally. When the tortilla is golden underneath, place a flat lid or plate over the pan and turn the tortilla out onto it. Add another tablespoon of oil to the pan and slide the tortilla back in, uncooked side down. Cook for a further 4-5 minutes, then turn the heat off and leave the tortilla to settle for a few minutes. Serve warm or cold, cut into wedges."
+            }
+        ],
+        "servingSize": 4,
+        "cuisineType": "spanish",
+        "mealType": "lunch",
+        "favorite": true,
+        "image": "patatas.jpg"
+    },
+    {
+        "name": "Banana Bread",
+        "summary": "Banana bread is a type of sweet bread made from mashed bananas. It originates from the 19th century United States.",
+        "difficulty": "easy",
+        "prepTime": 15,
+        "cookingTime": 50,
+        "ingredients": [
+            {
+                "id": "8225ce3c-78b2-4b99-b626-76ff2f9888ab",
+                "name": "Butter",
+                "quantity": 140,
+                "unit": "g"
+            },
+            {
+                "id": "71fc7070-58b3-4664-90b3-a0e384bd4d7e",
+                "name": "Caster sugar",
+                "quantity": 140,
+                "unit": "g"
+            },
+            {
+                "id": "302c095c-0775-4741-93a3-92b0e4c920ac",
+                "name": "Eggs",
+                "quantity": 2,
+                "unit": ""
+            },
+            {
+                "id": "b470b6ca-9b1e-4b6c-ace4-de194a6c3275",
+                "name": "Flour (self-raising)",
+                "quantity": 140,
+                "unit": "g"
+            },
+            {
+                "id": "9058cc31-8472-4ade-8251-d0480070a9e8",
+                "name": "Baking powder",
+                "quantity": 1,
+                "unit": "tsp"
+            },
+            {
+                "id": "5b44fae9-1004-45ca-b66c-26ca37e57fbb",
+                "name": "Bananas (very ripe)",
+                "quantity": 2,
+                "unit": ""
+            },
+            {
+                "id": "efa2d276-d2ba-4315-8271-2f0cd2e64879",
+                "name": "Icing sugar",
+                "quantity": 50,
+                "unit": "g"
+            }
+        ],
+        "instructions": [
+            {
+                "id": "a3b4f39a-aa3b-4361-8f0f-172e2a79be26",
+                "title": "Prepare the mixture",
+                "instruction": "Cream 140g softened butter and 140g caster sugar until light and fluffy, then slowly add 2 beaten large eggs with a little of the 140g flour. Then fold in the remaining flour, 1 tsp baking powder and 2 mashed bananas."
+            },
+            {
+                "id": "708fad9b-2a09-4017-927e-9f25d98bbe29",
+                "title": "Prepare for baking",
+                "instruction": "Heat oven to 180C. Butter a 2lb loaf tin and line the base and sides with baking parchment."
+            },
+            {
+                "id": "b679eb1a-549b-4ad9-b8f4-f45b4e5510c7",
+                "title": "Bake the bread",
+                "instruction": "Pour the mixture into the prepared tin and bake for about 50 mins, or until cooked through. Check the loaf at 5-min intervals from around 30-40 mins in the oven by testing it with a skewer (it should be able to be inserted and removed cleanly), as the time may vary depending on the shape of your loaf tin."
+            },
+            {
+                "id": "060e41f2-61e4-41b3-80d4-fc48b5415522",
+                "title": "Cool the bread",
+                "instruction": "Cool in the tin for 10 mins, then remove to a wire rack."
+            },
+            {
+                "id": "85fae9df-369c-497a-a385-c1bcb9eeeeb9",
+                "title": "Add icing",
+                "instruction": "Mix 50g icing sugar with 2-3 tsp water to make a runny icing. Drizzle the icing across the top of the cake."
+            }
+        ],
+        "servingSize": 4,
+        "cuisineType": "american",
+        "mealType": "dessert",
+        "favorite": false,
+        "image": "banana.jpg"
+    },
+    {
+        "name": "Butter Chicken",
+        "summary": "Butter chicken, traditionally known as murgh makhani, is an Indian dish originating in Delhi. It is a type of curry made from chicken with a spiced tomato and butter sauce. Its sauce is known for its rich texture.",
+        "difficulty": "medium",
+        "prepTime": 15,
+        "cookingTime": 75,
+        "ingredients": [
+            {
+                "id": "34718419-4f39-44f3-843d-baaf9eb9596e",
+                "name": "Greek yogurt (full-fat)",
+                "quantity": 1.5,
+                "unit": "cups"
+            },
+            {
+                "id": "8d7b76c6-2ee0-4cc8-8036-88057c1ac520",
+                "name": "Lemon juice",
+                "quantity": 2,
+                "unit": "tbsp"
+            },
+            {
+                "id": "142f2d1d-2205-4a0e-81d1-d7418fb600fa",
+                "name": "Ground turmeric",
+                "quantity": 1.5,
+                "unit": "tbsp"
+            },
+            {
+                "id": "1c1afb4b-9668-4d53-a30c-0639632f15dc",
+                "name": "Garam masala",
+                "quantity": 2,
+                "unit": "tbsp"
+            },
+            {
+                "id": "ecc8cb0f-561f-4491-802e-ef2a38a4d881",
+                "name": "Ground cumin",
+                "quantity": 2,
+                "unit": "tbsp"
+            },
+            {
+                "id": "1a9823c1-1105-41c2-87a2-651187b16cb1",
+                "name": "Chicken thighs (on the bone)",
+                "quantity": 3,
+                "unit": "lbs"
+            },
+            {
+                "id": "91334f40-e66d-46c2-8315-b6dd4179dfc2",
+                "name": "Butter (unsalted)",
+                "quantity": 0.25,
+                "unit": "lbs"
+            },
+            {
+                "id": "8168f2e1-fddd-42eb-b6b8-b0e1f6acc5cc",
+                "name": "Vegetable oil",
+                "quantity": 4,
+                "unit": "tsp"
+            },
+            {
+                "id": "56c25ab1-ef46-45e4-9684-374bef7cab59",
+                "name": "Yellow onion",
+                "quantity": 2,
+                "unit": ""
+            },
+            {
+                "id": "3d3b6efe-fce5-4549-aade-73729cf4f9ce",
+                "name": "Garlic",
+                "quantity": 4,
+                "unit": "cloves"
+            },
+            {
+                "id": "777a7ff6-f769-4036-87c1-19ffda511801",
+                "name": "Fresh ginger",
+                "quantity": 3,
+                "unit": "tbsp"
+            },
+            {
+                "id": "d358c2ca-3003-4e1e-a70a-683334f37c8a",
+                "name": "Cumin seeds",
+                "quantity": 1,
+                "unit": "tbsp"
+            },
+            {
+                "id": "6e4f12d8-6f17-4c2b-884f-713a22877b2a",
+                "name": "Cinnamon stick",
+                "quantity": 1,
+                "unit": ""
+            },
+            {
+                "id": "e9955a9b-06c5-4a6d-87fa-b5989bc39199",
+                "name": "Tomato",
+                "quantity": 2,
+                "unit": ""
+            },
+            {
+                "id": "6021976a-56ae-42b7-a5d6-e20bb7f17e5c",
+                "name": "Red chiles",
+                "quantity": 2,
+                "unit": ""
+            },
+            {
+                "id": "e6fac00a-8c7b-4f8e-8d35-23031b2a2e8e",
+                "name": "Chicken stock",
+                "quantity": 0.66,
+                "unit": "cups"
+            },
+            {
+                "id": "c5b191ed-3185-4f08-994b-a61cc72c66d1",
+                "name": "Cream",
+                "quantity": 1.5,
+                "unit": "cups"
+            },
+            {
+                "id": "d5011c2b-bbcf-4c20-ad24-1e17cd585a7b",
+                "name": "Tomato paste",
+                "quantity": 1.5,
+                "unit": "tsp"
+            },
+            {
+                "id": "0c9ff425-0011-4161-8663-b733834c8ee6",
+                "name": "Ground almonds",
+                "quantity": 3,
+                "unit": "tbsp"
+            },
+            {
+                "id": "d292c479-dd11-4bbc-b176-b69ed85b968d",
+                "name": "Cilantro leaves",
+                "quantity": 0.5,
+                "unit": "bunch"
+            }
+        ],
+        "instructions": [
+            {
+                "id": "9eabae3c-7a31-412c-8f23-b77fa3b2be27",
+                "title": "Marinate the chicken",
+                "instruction": "Whisk together the yogurt, lemon juice, turmeric, garam masala and cumin in a large bowl. Put the chicken in, and coat with the marinade. Cover, and refrigerate (for up to a day)."
+            },
+            {
+                "id": "09d686ca-33e6-43b2-af91-bed95d5fd06a",
+                "title": "Prepare the base",
+                "instruction": "In a large pan over medium heat, melt the butter in the oil until it starts to foam. Add the onions, and cook, stirring frequently, until translucent. Add the garlic, ginger and cumin seeds, and cook until the onions start to brown."
+            },
+            {
+                "id": "5d2092b6-1ff4-4608-89ac-0fe1c315d1da",
+                "title": "Add the spices",
+                "instruction": "Add the cinnamon stick, tomatoes, chiles and salt, and cook until the chiles are soft, about 10 minutes."
+            },
+            {
+                "id": "6f757f9b-c5d0-4ca6-b913-fff4c4500959",
+                "title": "Cook the chicken",
+                "instruction": "Add the chicken and marinade to the pan, and cook for 5 minutes, then add the chicken stock. Bring the mixture to a boil, then lower the heat and simmer, uncovered, for approximately 30 minutes."
+            },
+            {
+                "id": "177132d9-19e8-4467-bd30-f2b70bfe365c",
+                "title": "Add the cream and tomato paste",
+                "instruction": "Stir in the cream and tomato paste, and simmer until the chicken is cooked through, approximately 10 to 15 minutes."
+            },
+            {
+                "id": "49241df6-8ecf-4c0a-9110-07f90265d725",
+                "title": "Garnish and serve",
+                "instruction": "Add the almonds, cook for an additional 5 minutes and remove from the heat. Garnish with the cilantro leaves."
+            }
+        ],
+        "servingSize": 6,
+        "cuisineType": "indian",
+        "mealType": "lunch",
+        "favorite": false,
+        "image": "butter.jpeg"
+    },
+    {
+        "name": "Pizza Dough",
+        "summary": "Pizza is a traditional Italian dish typically consisting of a flat base of leavened wheat-based dough topped with tomato, cheese, and other ingredients, baked at a high temperature, traditionally in a wood-fired oven.",
+        "difficulty": "easy",
+        "prepTime": 20,
+        "cookingTime": 20,
+        "ingredients": [
+            {
+                "id": "ea265bc2-6cfd-40ed-a3a7-f891a9cf4a68",
+                "name": "00 flour",
+                "quantity": 153,
+                "unit": "g"
+            },
+            {
+                "id": "b80939ee-02e0-47e8-94c0-d64b142a4e39",
+                "name": "All-purpose flour",
+                "quantity": 153,
+                "unit": "g"
+            },
+            {
+                "id": "0060f52e-8df5-4167-96f2-b6d5d04115bd",
+                "name": "Fine sea salt",
+                "quantity": 8,
+                "unit": "g"
+            },
+            {
+                "id": "73c95871-4ee1-4106-aef5-1339c4b79524",
+                "name": "Active dry yeast",
+                "quantity": 2,
+                "unit": "g"
+            },
+            {
+                "id": "a495fbb4-9c2e-4b3a-b4a9-257ebcd435fb",
+                "name": "Olive oil",
+                "quantity": 4,
+                "unit": "g"
+            }
+        ],
+        "instructions": [
+            {
+                "id": "be1def61-f8f2-45cd-83ef-c2d0be3f4205",
+                "title": "Prepare flour",
+                "instruction": "In a large mixing bowl, combine flours and salt."
+            },
+            {
+                "id": "9c0b1cbd-1f1c-471d-9cc3-9d08ea0705bc",
+                "title": "Knead the dough",
+                "instruction": "In a small mixing bowl, stir together 200 grams (a little less than 1 cup) lukewarm tap water, the yeast and the olive oil, then pour it into flour mixture. Knead with your hands until well combined, approximately 3 minutes, then let the mixture rest for 15 minutes."
+            },
+            {
+                "id": "aa6be807-98e0-405e-88c9-b72575cf678a",
+                "title": "Knead again",
+                "instruction": "Knead rested dough for 3 minutes. Cut into 2 equal pieces and shape each into a ball. Place on a heavily floured surface, cover with dampened cloth, and let rest and rise for 3 to 4 hours at room temperature or for 8 to 24 hours in the refrigerator. (If you refrigerate the dough, remove it 30 to 45 minutes before you begin to shape it for pizza.)"
+            },
+            {
+                "id": "6558d596-aae0-4d95-91ca-d78fdff80d38",
+                "title": "Prepare and bake",
+                "instruction": "To make pizza, place each dough ball on a heavily floured surface and use your fingers to stretch it, then your hands to shape it into rounds or squares. Top and bake."
+            }
+        ],
+        "servingSize": 2,
+        "cuisineType": "italian",
+        "mealType": "lunch",
+        "favorite": true,
+        "image": "dough.jpg"
+    }
+]

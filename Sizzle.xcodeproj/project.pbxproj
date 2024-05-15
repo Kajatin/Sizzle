@@ -35,6 +35,16 @@
 		4C9093D62B5D4EC9000F96A3 /* UpNextNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D52B5D4EC9000F96A3 /* UpNextNavigationStack.swift */; };
 		4C9093D82B5D4EE0000F96A3 /* UpNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D72B5D4EE0000F96A3 /* UpNext.swift */; };
 		4C9093DA2B5D517A000F96A3 /* SearchNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9093D92B5D517A000F96A3 /* SearchNavigationStack.swift */; };
+		4CA51FC82BF403B0006723DF /* example-recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FC72BF403B0006723DF /* example-recipes.json */; };
+		4CA51FC92BF403B0006723DF /* example-recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FC72BF403B0006723DF /* example-recipes.json */; };
+		4CA51FCB2BF403BB006723DF /* patatas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FCA2BF403BB006723DF /* patatas.jpg */; };
+		4CA51FCC2BF403BB006723DF /* patatas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FCA2BF403BB006723DF /* patatas.jpg */; };
+		4CA51FCE2BF485C5006723DF /* banana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FCD2BF485C5006723DF /* banana.jpg */; };
+		4CA51FCF2BF485C5006723DF /* banana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FCD2BF485C5006723DF /* banana.jpg */; };
+		4CA51FD12BF5468D006723DF /* butter.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FD02BF5468D006723DF /* butter.jpeg */; };
+		4CA51FD22BF5468D006723DF /* butter.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FD02BF5468D006723DF /* butter.jpeg */; };
+		4CA51FD42BF54AEF006723DF /* dough.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FD32BF54AEF006723DF /* dough.jpg */; };
+		4CA51FD52BF54AEF006723DF /* dough.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA51FD32BF54AEF006723DF /* dough.jpg */; };
 		4CC355642B4B33D100D0CD16 /* Sizzle_TVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC355632B4B33D100D0CD16 /* Sizzle_TVApp.swift */; };
 		4CC355662B4B33D100D0CD16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC355652B4B33D100D0CD16 /* ContentView.swift */; };
 		4CC3556A2B4B33D300D0CD16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC355692B4B33D300D0CD16 /* Assets.xcassets */; };
@@ -95,6 +105,11 @@
 		4C9093D52B5D4EC9000F96A3 /* UpNextNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpNextNavigationStack.swift; sourceTree = "<group>"; };
 		4C9093D72B5D4EE0000F96A3 /* UpNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpNext.swift; sourceTree = "<group>"; };
 		4C9093D92B5D517A000F96A3 /* SearchNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationStack.swift; sourceTree = "<group>"; };
+		4CA51FC72BF403B0006723DF /* example-recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "example-recipes.json"; sourceTree = "<group>"; };
+		4CA51FCA2BF403BB006723DF /* patatas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = patatas.jpg; sourceTree = "<group>"; };
+		4CA51FCD2BF485C5006723DF /* banana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banana.jpg; sourceTree = "<group>"; };
+		4CA51FD02BF5468D006723DF /* butter.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = butter.jpeg; sourceTree = "<group>"; };
+		4CA51FD32BF54AEF006723DF /* dough.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dough.jpg; sourceTree = "<group>"; };
 		4CC355612B4B33D100D0CD16 /* Sizzle TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sizzle TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC355632B4B33D100D0CD16 /* Sizzle_TVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizzle_TVApp.swift; sourceTree = "<group>"; };
 		4CC355652B4B33D100D0CD16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -155,6 +170,7 @@
 		4C0C8CE02B11F3E6002ABA4E /* Sizzle */ = {
 			isa = PBXGroup;
 			children = (
+				4CA51FC02BF4029B006723DF /* Examples */,
 				4CFB2B242B1D13C200C99715 /* Recents */,
 				4CFB2B232B1D13BB00C99715 /* Favourites */,
 				4C2A50B22B17DB76000B6860 /* Schedule */,
@@ -259,6 +275,18 @@
 				4C9093D72B5D4EE0000F96A3 /* UpNext.swift */,
 			);
 			path = UpNext;
+			sourceTree = "<group>";
+		};
+		4CA51FC02BF4029B006723DF /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				4CA51FC72BF403B0006723DF /* example-recipes.json */,
+				4CA51FCA2BF403BB006723DF /* patatas.jpg */,
+				4CA51FCD2BF485C5006723DF /* banana.jpg */,
+				4CA51FD02BF5468D006723DF /* butter.jpeg */,
+				4CA51FD32BF54AEF006723DF /* dough.jpg */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		4CC355622B4B33D100D0CD16 /* Sizzle TV */ = {
@@ -398,8 +426,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA51FC82BF403B0006723DF /* example-recipes.json in Resources */,
+				4CA51FD42BF54AEF006723DF /* dough.jpg in Resources */,
 				4C0C8CEB2B11F3E7002ABA4E /* Preview Assets.xcassets in Resources */,
 				4C0C8CE82B11F3E7002ABA4E /* Assets.xcassets in Resources */,
+				4CA51FCB2BF403BB006723DF /* patatas.jpg in Resources */,
+				4CA51FCE2BF485C5006723DF /* banana.jpg in Resources */,
+				4CA51FD12BF5468D006723DF /* butter.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,8 +440,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA51FC92BF403B0006723DF /* example-recipes.json in Resources */,
+				4CA51FD52BF54AEF006723DF /* dough.jpg in Resources */,
 				4CC3556D2B4B33D300D0CD16 /* Preview Assets.xcassets in Resources */,
 				4CC3556A2B4B33D300D0CD16 /* Assets.xcassets in Resources */,
+				4CA51FCC2BF403BB006723DF /* patatas.jpg in Resources */,
+				4CA51FCF2BF485C5006723DF /* banana.jpg in Resources */,
+				4CA51FD22BF5468D006723DF /* butter.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,9 @@ struct ForYouNavigationStack: View {
         NavigationStack(path: $path) {
             ForYouCarousel(navigationPath: $path)
         }
+        .onDisappear {
+            path.removeAll()
+        }
     }
 }
 
