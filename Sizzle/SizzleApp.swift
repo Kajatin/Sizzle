@@ -15,6 +15,7 @@ struct SizzleApp: App {
         WindowGroup {
             ContentView()
                 .recipeDataContainer()
+                .recipePreloadExamples()
         }
     }
 }

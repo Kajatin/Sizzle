@@ -67,10 +67,7 @@ struct RecipeGrid: View {
         .scenePadding()
         .navigationTitle("Recipes")
         .navigationDestination(for: Recipe.self) { recipe in
-            EmojiBackground()
-                .overlay {
-                    RecipeDetail(recipe: recipe, navigationPath: $navigationPath)
-                }
+            RecipeDetail(recipe: recipe, navigationPath: $navigationPath)
         }
         .toolbar {
             ToolbarItem {

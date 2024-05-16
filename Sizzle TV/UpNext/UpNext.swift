@@ -33,10 +33,7 @@ struct UpNext: View {
             }
         }
         .navigationDestination(for: Recipe.self) { recipe in
-            EmojiBackground()
-                .overlay {
-                    RecipeDetail(recipe: recipe)
-                }
+            RecipeDetail(recipe: recipe)
         }
     }
 }

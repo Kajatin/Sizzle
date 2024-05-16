@@ -10,7 +10,7 @@ import SwiftData
 import RecipeDataContainer
 
 struct RecipeDetail: View {
-    let recipe: Recipe
+    @Bindable var recipe: Recipe
 
     @State private var showEditSheet = false
     @State private var showScheduleSheet = false
@@ -18,41 +18,38 @@ struct RecipeDetail: View {
     let spacing: CGFloat = 20
 
     var body: some View {
-        EmojiBackground()
-            .overlay {
-                VStack {
-                    HStack(alignment: .center) {
-                        RecipeHeader(recipe: recipe)
+        VStack {
+            HStack(alignment: .center) {
+                RecipeHeader(recipe: recipe)
 
-                        Spacer()
+                Spacer()
 
-                        HStack(alignment: .center) {
-                            Button {
-                                showScheduleSheet = true
-                            } label: {
-                                Label("Add to Schedule", systemImage: "list.clipboard")
-                            }
+                HStack(alignment: .center) {
+//                    Button {
+//                        showScheduleSheet = true
+//                    } label: {
+//                        Label("Add to Schedule", systemImage: "list.clipboard")
+//                    }
 
-                            Button {
-                                showEditSheet = true
-                            } label: {
-                                Label("More", systemImage: "ellipsis")
-                                    .labelStyle(.titleOnly)
-                            }
-                        }
-                    }
-
-                    GeometryReader { geometry in
-                        HStack(alignment: .top, spacing: spacing) {
-                            Column1(recipe: recipe)
-                                .frame(width: (geometry.size.width - spacing) * 2 / 5)
-                            Spacer()
-                            Column2(recipe: recipe)
-                                .frame(width: (geometry.size.width - spacing) * 3 / 5)
-                        }
+                    Button {
+                        showEditSheet = true
+                    } label: {
+                        Label("More", systemImage: "ellipsis")
+                            .labelStyle(.titleOnly)
                     }
                 }
             }
+
+            GeometryReader { geometry in
+                HStack(alignment: .top, spacing: spacing) {
+                    Column1(recipe: recipe)
+                        .frame(width: (geometry.size.width - spacing) * 2 / 5)
+                    Spacer()
+                    Column2(recipe: recipe)
+                        .frame(width: (geometry.size.width - spacing) * 3 / 5)
+                }
+            }
+        }
         .sheet(isPresented: $showEditSheet) {
             VStack {
                 Button {
@@ -61,10 +58,10 @@ struct RecipeDetail: View {
                     Label(recipe.favorite ? "Remove from Favourites" : "Add to Favourites", systemImage: recipe.favorite ? "star.fill" : "star")
                 }
 
-                Button {
-                } label: {
-                    Label("Add to Shopping List", systemImage: "cart")
-                }
+//                Button {
+//                } label: {
+//                    Label("Add to Shopping List", systemImage: "cart")
+//                }
 
                 Button {
                     recipe.cookedCount += 1
@@ -84,10 +81,10 @@ struct RecipeDetail: View {
                             .foregroundStyle(.secondary)
                     }
 
-                    if let nextSchedule = recipe.schedule {
-                        Text("Scheduled for \(nextSchedule.formatted(date: .long, time: .shortened))")
-                            .foregroundStyle(.secondary)
-                    }
+//                    if let nextSchedule = recipe.schedule {
+//                        Text("Scheduled for \(nextSchedule.formatted(date: .long, time: .shortened))")
+//                            .foregroundStyle(.secondary)
+//                    }
                 }
                 .padding(.top)
             }
@@ -408,9 +405,24 @@ struct RecipeParametersUnit: View {
     }
 }
 
-//#Preview {
-//    RecipeDetail()
-//        .modelContainer(for: Recipe.self, inMemory: true)
-////        .recipeDataContainer(inMemory: true)
-//}
+#Preview {
+    do {
+        @State var path: [Recipe] = []
+        let schema = Schema([
+            Recipe.self,
+        ])
+        let configuration = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: schema, configurations: [configuration])
+        
+        let recipe = Recipe.example()
+        recipe.cuisineType = .spanish
+        recipe.mealType = .lunch
+        return NavigationStack {
+            RecipeDetail(recipe: recipe)
+                .modelContainer(container)
+        }
+    } catch {
+        fatalError("Failed to create model context.")
+    }
+}
 

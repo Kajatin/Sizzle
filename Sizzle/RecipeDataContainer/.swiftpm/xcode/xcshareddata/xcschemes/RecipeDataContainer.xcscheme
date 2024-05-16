@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C0C8CDD2B11F3E6002ABA4E"
-               BuildableName = "Sizzle.app"
-               BlueprintName = "Sizzle"
-               ReferencedContainer = "container:Sizzle.xcodeproj">
+               BlueprintIdentifier = "RecipeDataContainer"
+               BuildableName = "RecipeDataContainer"
+               BlueprintName = "RecipeDataContainer"
+               ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C0C8CDD2B11F3E6002ABA4E"
-            BuildableName = "Sizzle.app"
-            BlueprintName = "Sizzle"
-            ReferencedContainer = "container:Sizzle.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C0C8CDD2B11F3E6002ABA4E"
-            BuildableName = "Sizzle.app"
-            BlueprintName = "Sizzle"
-            ReferencedContainer = "container:Sizzle.xcodeproj">
+            BlueprintIdentifier = "RecipeDataContainer"
+            BuildableName = "RecipeDataContainer"
+            BlueprintName = "RecipeDataContainer"
+            ReferencedContainer = "container:">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

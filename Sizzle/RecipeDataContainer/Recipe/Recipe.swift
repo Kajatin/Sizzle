@@ -10,7 +10,7 @@ import SwiftData
 import Foundation
 
 @Model
-public final class Recipe: Identifiable {
+public final class Recipe: Identifiable, Decodable {
     public var uuid = UUID()
     public var name: String = "New Recipe"
     public var summary: String = "Summary"
@@ -32,7 +32,35 @@ public final class Recipe: Identifiable {
     public var favorite: Bool = false
     public var schedule: Date?
 
+    enum CodingKeys: String, CodingKey {
+        case name, summary, image, difficulty, prepTime, cookingTime, ingredients, instructions, servingSize, cuisineType, mealType, favorite
+    }
+
     public init() {}
+
+    required public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        uuid = UUID()
+        name = try container.decode(String.self, forKey: .name)
+        summary = try container.decode(String.self, forKey: .summary)
+        
+        let imageUrl = try container.decode(String.self, forKey: .image)
+        
+        let uiimage = UIImage(named: imageUrl)
+        image = uiimage?.jpegData(compressionQuality: 0.95)
+        
+        difficulty = try container.decode(Difficulty.self, forKey: .difficulty)
+        prepTime = try container.decode(Int.self, forKey: .prepTime)
+        cookingTime = try container.decode(Int.self, forKey: .cookingTime)
+        ingredients = try container.decode([Ingredient].self, forKey: .ingredients)
+        instructions = try container.decode([Instruction].self, forKey: .instructions)
+        servingSize = try container.decode(Int.self, forKey: .servingSize)
+        cuisineType = try container.decode(Cuisine.self, forKey: .cuisineType)
+        mealType = try container.decode(MealType.self, forKey: .mealType)
+        created = .now
+        cookedCount = 0
+        favorite = try container.decode(Bool.self, forKey: .favorite)
+    }
 }
 
 public extension Recipe {

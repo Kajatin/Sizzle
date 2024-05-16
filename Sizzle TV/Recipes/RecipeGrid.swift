@@ -16,17 +16,12 @@ struct RecipeGrid: View {
 
     var body: some View {
         if recipes.isEmpty {
-            EmojiBackground()
-                .overlay {
-                    Text("Get started by adding some recipes")
-                        .font(.title3)
-                        .padding(30)
-                        .background(.thinMaterial)
-                        .clipped()
-                        .cornerRadius(20)
-                }
+            Text("Get started by adding some recipes")
+                .font(.title3)
                 .padding(30)
-                .ignoresSafeArea(.all)
+                .background(.thinMaterial)
+                .clipped()
+                .cornerRadius(20)
         } else {
             ScrollView {
                 VStack(spacing: 30) {
@@ -117,7 +112,7 @@ struct RecipeTile: View {
                         .resizable()
                         .scaledToFill()
                 } else {
-                    Image(systemName: "photo")
+                    Image(systemName: "book.pages")
                         .resizable()
                         .scaledToFill()
                         .tint(.secondary)
@@ -132,6 +127,7 @@ struct RecipeTile: View {
 //                    }
                 }
             }
+            .hoverEffect(.highlight)
             .aspectRatio(4/3, contentMode: .fill)
             .frame(width: 300, height: 225)
             .background(.thinMaterial)

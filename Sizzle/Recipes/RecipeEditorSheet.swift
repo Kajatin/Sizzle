@@ -233,7 +233,7 @@ struct FluidStepper: View {
 }
 
 #Preview {
-    var recipe = Recipe()
+    let recipe = Recipe()
     @State var path: [Recipe] = []
     return RecipeEditorSheet(recipe: recipe, navigationPath: $path)
 }

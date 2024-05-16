@@ -94,7 +94,7 @@ struct RecipeScheduler: View {
 }
 
 #Preview {
-    var recipe = Recipe()
+    let recipe = Recipe()
     @State var path: [Recipe] = []
     return RecipeScheduleSheet(recipe: recipe, navigationPath: $path)
         .recipeDataContainer(inMemory: true)

@@ -10,7 +10,7 @@ import SwiftUI
 enum AppScreen: Codable, Hashable, Identifiable, CaseIterable {
     case foryou
     case recipes
-    case upnext
+//    case upnext
     case search
     
     var id: AppScreen { self }
@@ -26,9 +26,9 @@ extension AppScreen {
         case .recipes:
             Label("Recipes", systemImage: "book.pages")
                 .labelStyle(.titleOnly)
-        case .upnext:
-            Label("Up Next", systemImage: "sun.max")
-                .labelStyle(.titleOnly)
+//        case .upnext:
+//            Label("Up Next", systemImage: "sun.max")
+//                .labelStyle(.titleOnly)
         case .search:
 //            Label("Search", systemImage: "magnifyingglass")
 //                .labelStyle(.iconOnly)
@@ -43,8 +43,8 @@ extension AppScreen {
             ForYouNavigationStack()
         case .recipes:
             RecipeNavigationStack()
-        case .upnext:
-            UpNextNavigationStack()
+//        case .upnext:
+//            UpNextNavigationStack()
         case .search:
             SearchNavigationStack()
         }

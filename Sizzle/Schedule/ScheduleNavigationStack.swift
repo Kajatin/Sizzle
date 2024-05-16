@@ -12,12 +12,9 @@ struct ScheduleNavigationStack: View {
     @State private var path: [Recipe] = []
     
     var body: some View {
-        EmojiBackground()
-            .overlay {
-                NavigationStack(path: $path) {
-                    ScheduleView(navigationPath: $path)
-                }
-            }
+        NavigationStack(path: $path) {
+            ScheduleView(navigationPath: $path)
+        }
     }
 }
 
